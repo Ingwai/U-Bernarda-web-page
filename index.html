@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/227c86e519.js" crossorigin="anonymous"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700;800&family=Oswald:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <title>Auto — Naprawa U BERNARDA</title>
+</head>
+
+<body>
+    <!-- Navbar -->
+
+    <nav class="navbar">
+
+        <div class="navbar__autobox">
+            <div class="navbar__autobox-content">
+                <img src="./images/red_car.png" alt="">
+                <div class="navbar__autobox-wheel1">
+                    <img src="./images/wheel1.png" alt="car wheel">
+                </div>
+                <div class="navbar__autobox-wheel2">
+                    <img src="./images/wheel1.png" alt="car wheel">
+                </div>
+            </div>
+        </div>
+
+        <div class="navbar__logo">
+            <p>
+                <span>Auto - Naprawa</span> U Bernarda
+            </p>
+        </div>
+        <div class="navbar__list">
+            <a href="#section-1" class="navbar__list-link">Home</a>
+            <a href="#section-2" class="navbar__list-link">About</a>
+            <a href="#section-3" class="navbar__list-link">Pricing</a>
+            <a href="#section-4" class="navbar__list-link">Contact</a>
+        </div>
+    </nav>
+
+    <!-- End of navbar -->
+    <!-- Menu -->
+    <div class="menu">
+        <div class="line line-1"></div>
+        <div class="line line-2"></div>
+        <div class="line line-3"></div>
+    </div>
+
+    <!-- End of menu -->
+
+    <div class="container">
+
+        <!-- Section 1  -->
+        <section class="section-1" id="section-1">
+            <div class="section-1__video">
+                <video class="section-1__video-content" autoplay muted loop>
+                    <source src="./images/road.mp4" type="video/mp4">
+                    Your browser is not supported!
+                </video>
+            </div>
+            <div class="section-1__banner">
+                <h1 class="section-1__banner-heading">
+                    <span class="section-1__banner-heading-1">Naprawa</span>
+                    <span class="section-1__banner-heading-2">Diagnostyka</span>
+                    <span class="section-1__banner-heading-3">Wulkanizacja</span>
+                    <span class="section-1__banner-heading-4">Klimatyzacja</span>
+                </h1>
+                <p class="section-1__banner-paragraph">Mechanika samochodowa</p>
+                <button class="section-1__banner-btn">Dowiedz się więcej</button>
+            </div>
+        </section>
+
+        <!-- End of Section 1 -->
+
+
+
+        <!-- Section 2  -->
+        <section class="section-2" id="section-2">
+            <h1 class="heading">About Us</h1>
+            <div class="section-2__video-wrapper">
+                <video src="images/about-us-video.mp4" class="video"></video>
+                <div class="section-2__controls">
+                    <div class="section-2__controls-video-bar-wrapper">
+                        <div class="section-2__controls-video-bar"></div>
+                    </div>
+                    <div class="section-2__controls-buttons">
+                        <button>
+                            <i class="far fa-play-circle"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <p class="section-2__paragraph">
+                <i class="fas fa-quote-left"></i>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, quisquam consequuntur, inventore,
+                repellat eveniet harum accusamus sint sapiente soluta dolor vitae. Ullam deleniti, distinctio ad
+                eligendi similique a cumque deserunt?
+                <i class="fas fa-quote-right"></i>
+            </p>
+        </section>
+
+        <!-- End of Section 2 -->
+
+        <!-- Section 3 -->
+
+        <section class="section-3" id="section-3">
+            <h1 class="heading">Pricing</h1>
+            <div class="swiper mySwiper">
+                <div class="pricing-cards-wrapper swiper-wrapper">
+                    <div class="pricing-card swiper-slide">
+                        <div class="pricing-card-front">
+                            <h1 class="pricing-card-heading heading-free">FREE</h1>
+                            <h3 class="pricing-card-price">$0</h3>
+                            <ul class="pricing-card-list list-free">
+                                <li>
+                                    <i class="fas fa-check"></i>
+                                    <span>Pricing Card Item</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-check"></i>
+                                    <span>Pricing Card Item</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-times"></i>
+                                    <span>Pricing Card Item</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-times"></i>
+                                    <span>Pricing Card Item</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-times"></i>
+                                    <span>Pricing Card Item</span>
+                                </li>
+                            </ul>
+                            <button class="pricing-card-btn btn-free">Choose Plan</button>
+                        </div>
+                        <div class="pricing-card-back back-free">
+                            <a href="#">Order now</a>
+                        </div>
+                    </div>
+
+
+                    <div class="pricing-card swiper-slide">
+                        <div class="pricing-card-front">
+                            <h1 class="pricing-card-heading heading-basic">BASIC</h1>
+                            <h3 class="pricing-card-price">$199</h3>
+                            <ul class="pricing-card-list list-basic">
+                                <li>
+                                    <i class="fas fa-check"></i>
+                                    <span>Pricing Card Item</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-check"></i>
+                                    <span>Pricing Cartimesm</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-check"></i>
+                                    <span>Pricing Cartimesm</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-check"></i>
+                                    <span>Pricing Card Item</span>
+                                </li>
+
+                                <li>
+                                    <i class="fas fa-times"></i>
+                                    <span>Pricing Card Item</span>
+                                </li>
+                            </ul>
+                            <button class="pricing-card-btn btn-basic">Choose Plan</button>
+                        </div>
+                        <div class="pricing-card-back back-basic">
+                            <a href="#">Order now</a>
+                        </div>
+                    </div>
+
+
+                    <div class="pricing-card swiper-slide">
+                        <div class="pricing-card-front">
+                            <h1 class="pricing-card-heading heading-standard">STANDARD</h1>
+                            <h3 class="pricing-card-price">$299</h3>
+                            <ul class="pricing-card-list list-standard">
+                                <li>
+                                    <i class="fas fa-check"></i>
+                                    <span>Pricing Card Item</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-check"></i>
+                                    <span>Pricing Cartimesm</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-check"></i>
+                                    <span>Pricing Cartimesm</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-check"></i>
+                                    <span>Pricing Card Item</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-check"></i>
+                                    <span>Pricing Card Item</span>
+                                </li>
+                            </ul>
+                            <button class="pricing-card-btn btn-standard">Choose Plan</button>
+                        </div>
+                        <div class="pricing-card-back back-standard">
+                            <a href="#">Order now</a>
+                        </div>
+                    </div>
+
+
+                    <div class="pricing-card swiper-slide">
+                        <div class="pricing-card-front">
+                            <h1 class="pricing-card-heading heading-premium">PREMIUM</h1>
+                            <h3 class="pricing-card-price">$499</h3>
+                            <ul class="pricing-card-list list-premium">
+                                <li>
+                                    <i class="fas fa-check"></i>
+                                    <span>Pricing Card Item</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-check"></i>
+                                    <span>Pricing Cartimesm</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-check"></i>
+                                    <span>Pricing Cartimesm</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-check"></i>
+                                    <span>Pricing Card Item</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-check"></i>
+                                    <span>Pricing Cartimesm</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-check"></i>
+                                    <span>Pricing Card Item</span>
+                                </li>
+                            </ul>
+                            <button class="pricing-card-btn btn-premium">Choose Plan</button>
+                        </div>
+                        <div class="pricing-card-back back-premium">
+                            <a href="#">Order now</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+        <!-- End of Section 3 -->
+
+
+        <!-- Section 4 -->
+
+        <section class="section-4" id="section-4">
+            <h1 class="heading">Contact</h1>
+            <div class="section-4__contact-wrapper">
+                <div class="section-4__contact-details">
+                    <div class="phone">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h3>Phone</h3>
+                        <p>+123 456 789</p>
+                        <p>+987 654 321</p>
+                    </div>
+
+                    <div class="address">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Address</h3>
+                        <p>Main Stree 123</p>
+                        <p>234 Pensylwania</p>
+                        <p>USA</p>
+                    </div>
+
+                    <div class="email">
+                        <i class="far fa-envelope"></i>
+                        <h3>Email</h3>
+                        <p>support@gmail.com</p>
+                    </div>
+                </div>
+                <h1>Get in Touch</h1>
+                <form class="section-4__contact-form">
+                    <input type="text" placeholder="Your name" required>
+                    <input type="email" placeholder="Your Email" pattern="[A-Za-z0-9._+-]+@[A-Za-z0-9 -]+\.[a-z]{2,4}"
+                        required>
+                    <textarea placeholder="Your Message"></textarea>
+                    <input type="submit" value="Send Message">
+
+                </form>
+            </div>
+
+        </section>
+        <!-- End of Section 4 -->
+
+
+        <section class="contactUs">
+            <div class="contactUs__title">
+                <h2 class="contactUs__heading">Get in Touch</h2>
+            </div>
+    
+            <div class="contactUs__box">
+    
+                <!-- Form -->
+    
+                <div class="contactUs__contact contactUs__form">
+                    <h3>Send a Message</h3>
+                    <form action="">
+                        <div class="contactUs__formBox">
+                            <div class="contactUs__row50">
+                                <div class="contactUs__inputBox">
+                                    <span>First Name</span>
+                                    <input type="text" placeholder="John" required>
+                                </div>
+                                <div class="contactUs__inputBox">
+                                    <span>Last Name</span>
+                                    <input type="text" placeholder="Doe" required>
+                                </div>
+                            </div>
+    
+                            <div class="contactUs__row50">
+                                <div class="contactUs__inputBox">
+                                    <span>Email</span>
+                                    <input type="text" pattern="[A-Za-z0-9._+-]+@[A-Za-z0-9 -]+\.[a-z]{2,4}"
+                                        placeholder="johndoe@email.com" required>
+                                </div>
+                                <div class="contactUs__inputBox">
+                                    <span>Mobile</span>
+                                    <input type="text" placeholder="+48 041 000 000">
+                                </div>
+                            </div>
+    
+                            <div class="contactUs__row100">
+                                <div class="contactUs__inputBox">
+                                    <span>Message</span>
+                                    <textarea placeholder="Write your message here..."></textarea>
+                                </div>
+                            </div>
+    
+                            <div class="contactUs__row100">
+                                <div class="contactUs__btnSubmit">
+                                    <input type="submit" value="Send">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+    
+                </div>
+    
+    
+                <!-- info Box -->
+                <div class="contactUs__contact contactUs__info">
+                    <h3>Contact Info</h3>
+                    <div class="contactUs__infoBox">
+                        <div>
+                            <span>
+                                <ion-icon name="location"></ion-icon>
+                            </span>
+                            <p>Marek Zapała, Kielce</p>
+                        </div>
+                        <div>
+                            <span>
+                                <ion-icon name="mail"></ion-icon>
+                            </span>
+                            <a href="mailto:loremipsum@email.com">loremipsum@email.com</a>
+                        </div>
+    
+                        <div>
+                            <span>
+                                <ion-icon name="call"></ion-icon>
+                            </span>
+                            <a href="tel: +48000000000">tel: +48 000 000 000</a>
+                        </div>
+                        <!-- Social Media Links -->
+                        <ul class="contactUs__sci">
+                            <li><a href="#">
+                                    <ion-icon name="logo-facebook"></ion-icon>
+                                </a></li>
+                            <li><a href="#">
+                                    <ion-icon name="logo-twitter"></ion-icon>
+                                </a></li>
+                            <li><a href="#">
+                                    <ion-icon name="logo-linkedin"></ion-icon>
+                                </a></li>
+                            <li><a href="#">
+                                    <ion-icon name="logo-instagram"></ion-icon>
+                                </a></li>
+    
+                        </ul>
+                    </div>
+                </div>
+    
+    
+                <!-- Map -->
+                <div class="contactUs__contact contactUs__map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2509.7838050572273!2d20.452060118029365!3d51.02014278252877!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47182cd619a2b979%3A0x1617e79adf1eb042!2sZapa%C5%82a%20Bernard%20Handel%20Mechanika%20Samochodowa%2Cwulkanizacja%2Cklimatyzacja%2Cdiagnostyka!5e0!3m2!1spl!2spl!4v1662403907347!5m2!1spl!2spl"
+                        style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    
+                </div>
+            </div>
+    
+        </section>
+    
+    
+        <!-- Footer  -->
+
+        <footer class="footer">
+
+            <div class="footer__nav">
+                <a href="#section-1">Home</a>
+                <a href="#section-2">About Us</a>
+                <a href="#section-3">Pricing</a>
+                <a href="#section-4">Contact</a>
+            </div>
+            <p class="footer__copyright">
+                Copyright &copy; CodeAndCreate All Rights Reserved
+            </p>
+        </footer>
+
+        <!-- End of Fooer -->
+
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
