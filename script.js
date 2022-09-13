@@ -15,36 +15,6 @@ navbarList.addEventListener('click', e => {
 
 // --------------------------------------------------
 
-const video = document.querySelector('.video');
-const btn = document.querySelector('.section-2__controls-buttons i');
-const bar = document.querySelector('.section-2__controls-video-bar');
-
-const playPause = () => {
-	if (video.paused) {
-		btn.className = 'far fa-pause-circle';
-		video.play();
-		video.style.opacity = '.8';
-	} else {
-		video.pause();
-		btn.className = 'far fa-play-circle';
-		video.style.opacity = '.3';
-	}
-};
-
-btn.addEventListener('click', () => playPause());
-
-video.addEventListener('timeupdate', () => {
-	const moviePercent = video.currentTime / video.duration;
-	bar.style.width = `${moviePercent * 100}%`;
-	if (video.ended) {
-		bar.style.width = '0%';
-		btn.className = 'far fa-play-circle';
-		video.style.opacity = '.3';
-	}
-});
-
-// ---------------------------------------------------------
-
 var swiper = new Swiper('.mySwiper', {
 	effect: 'coverflow',
 	grabCursor: true,
@@ -59,3 +29,13 @@ var swiper = new Swiper('.mySwiper', {
 		slideShadows: true,
 	},
 });
+
+// -----------------------------------------------------------
+
+const accordions = document.querySelectorAll('.contentBox');
+
+accordions.forEach(accordion =>
+	accordion.addEventListener('click', function () {
+		this.classList.toggle('active');
+	})
+);
