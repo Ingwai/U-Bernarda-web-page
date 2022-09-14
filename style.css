@@ -28,9 +28,9 @@ html {
 .navbar {
   width: 100%;
   height: 10rem;
-  background: url("./images/road.jpg") no-repeat;
-  background-size: cover;
-  background-position: top;
+  background-color: rgba(0, 0, 0, 0.85);
+  -webkit-backdrop-filter: blur(7px);
+          backdrop-filter: blur(7px);
   height: 10rem;
   position: fixed;
   top: -20rem;
@@ -191,6 +191,7 @@ html {
 }
 .navbar__list-link::first-letter {
   color: #9e0e09;
+  font-size: 5rem;
 }
 .navbar__list-link:hover {
   color: #9e0e09;
@@ -198,7 +199,7 @@ html {
 }
 .navbar__list-link:hover::first-letter {
   color: #fff;
-  text-shadow: 0rem 0rem 3rem #9e0e09;
+  text-shadow: 0rem 0rem 0.3rem #9e0e09;
 }
 
 .change .navbar__list {
@@ -473,145 +474,64 @@ html {
   font-size: 3rem;
 }
 
-.section-3 {
+.opinion {
   width: 100%;
   height: 100vh;
-  background-color: #03070e;
-  display: flex;
-  align-items: center;
-  padding-left: 10rem;
+  background: radial-gradient(circle, rgba(116, 45, 163, 0.8) 0%, rgba(231, 95, 95, 0.7) 50%, rgba(235, 165, 68, 0.8) 100%), url("./images/car-mechanic-customer-shaking-hands_Image by aleksandarlittlewolf on Freepik.jpg");
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
 }
-.section-3 .pricing-cards-wrapper {
+.opinion-cards-wrapper {
   width: 100%;
-  display: flex;
-  justify-content: space-evenly;
-  padding: 5rem;
+  padding: 3rem 0;
 }
-.section-3 .pricing-card {
-  width: 28rem;
-  height: 45rem;
-  background-color: #181b1d;
+.opinion-heading {
+  color: #fff;
+}
+.opinion-card {
+  background-image: url("./images/opinion.jpg");
+  background-position: center;
+  background-size: cover;
+  width: 45rem;
+  height: 65rem;
   border-radius: 1rem;
-  box-shadow: 2rem 2rem 6rem rgba(0, 0, 0, 0.7);
+  box-shadow: 0 1.5rem 5rem rgba(0, 0, 0, 0.2);
+  filter: blur(0.5rem) brightness(0.8);
+  transition: all 0.3s;
 }
-.section-3 .pricing-card-front {
+.opinion-box {
+  position: relative;
+  padding: 4rem 4rem 2rem 4rem;
   width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-}
-.section-3 .pricing-card-heading {
   font-size: 2rem;
-  font-weight: 300;
-  color: #fff;
-  width: 100%;
-  height: 5rem;
-  display: flex;
-  align-items: center;
-  padding-left: 2rem;
-  border-radius: 1rem 1rem 0 0;
 }
-.section-3 .heading-free {
-  background-image: linear-gradient(to right, #087285, #0da5d3);
-  border-radius: 1rem 1rem 0 0;
+.opinion-paragraph i {
+  font-size: 3rem;
+  display: block;
+  color: rgb(133, 210, 245);
 }
-.section-3 .heading-basic {
-  background-image: linear-gradient(to right, #946809, #bdba0e);
-  border-radius: 1rem 1rem 0 0;
+.opinion-paragraph .fa-quote-right {
+  text-align: right;
 }
-.section-3 .heading-standard {
-  background-image: linear-gradient(to right, #a10c14, #e23b3b);
-  border-radius: 1rem 1rem 0 0;
-}
-.section-3 .heading-premium {
-  background-image: linear-gradient(to right, #0b7e48, #3be286);
-  border-radius: 1rem 1rem 0 0;
-}
-.section-3 .pricing-card-price {
-  font-family: "Lato", sans-serif;
-  font-size: 7rem;
-  font-weight: 600;
-  color: #fff;
-}
-.section-3 .pricing-card-list li {
-  margin-bottom: 0.5rem;
-}
-.section-3 .pricing-card-list i {
-  font-size: 1.8rem;
-  width: 3rem;
-}
-.section-3 .pricing-card-list span {
-  font-size: 1.8rem;
-  font-weight: 400;
-  letter-spacing: 0.1rem;
-}
-.section-3 .list-free {
-  color: #0da5d3;
-}
-.section-3 .list-basic {
-  color: #bdba0e;
-}
-.section-3 .list-standard {
-  color: #e23d3b;
-}
-.section-3 .list-premium {
-  color: #3be286;
-}
-.section-3 .pricing-card-btn {
-  width: 18rem;
-  height: 5rem;
-  margin-bottom: 3rem;
-  border-radius: 3rem;
-  border: none;
-  font-size: 1.6rem;
-  text-transform: uppercase;
-  color: #fff;
-  text-shadow: 0.3rem 0.3rem 0.6rem rgba(0, 0, 0, 0.5);
-}
-.section-3 .btn-free {
-  background-color: #0da5d3;
-}
-.section-3 .btn-basic {
-  background-color: #bdba0e;
-}
-.section-3 .btn-standard {
-  background-color: #e23d3b;
-}
-.section-3 .btn-premium {
-  background-color: #3be286;
-}
-.section-3 .pricing-card-back {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transform: rotateY(180deg);
-  border-radius: 1rem;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-}
-.section-3 .pricing-card-back a {
+.opinion-author {
   font-size: 2.5rem;
-  color: #fff;
+  text-align: right;
+  margin-top: 1rem;
+  color: rgb(24, 183, 255);
 }
-.section-3 .back-free {
-  background-image: linear-gradient(to right, #087285, #0da5d3);
+.opinion-link {
+  display: block;
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  text-align: right;
 }
-.section-3 .back-basic {
-  background-image: linear-gradient(to right, #946809, #bdba0e);
+.opinion .swiper-slide-shadow-left,
+.opinion .swiper-slide-shadow-right {
+  background-image: none;
 }
-.section-3 .back-standard {
-  background-image: linear-gradient(to right, #a10c14, #e23b3b);
-}
-.section-3 .back-premium {
-  background-image: linear-gradient(to right, #0b7e48, #3be286);
+.opinion .swiper-slide-active {
+  filter: blur(0rem);
 }
 
 .section_accordion {
@@ -967,22 +887,38 @@ html {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-size: cover;
+  background-position: top;
+  background: radial-gradient(circle, rgba(139, 130, 130, 0.8) 40%, rgba(64, 63, 62, 0.9) 100%), url("./images/road.jpg") no-repeat;
   padding: 0 10rem;
 }
 .footer__nav a {
   font-family: "Lato", sans-serif;
   text-transform: uppercase;
   font-size: 2rem;
+  font-weight: 900;
   color: #fff;
-  margin-right: 3rem;
+  margin-right: 4.5rem;
   letter-spacing: 0.1rem;
   transition: color 0.4s;
+  display: inline-block;
+  transition: color 0.3s, scale 0.4s;
+}
+.footer__nav a::first-letter {
+  color: #862323;
+  font-size: 2.8rem;
 }
 .footer__nav a:hover {
   color: #862323;
+  scale: 1.1;
+  text-shadow: 0rem 0rem 0.3rem #fff;
+}
+.footer__nav a:hover::first-letter {
+  color: #fff;
+  text-shadow: 0rem 0rem 0.3rem #9e0e09;
 }
 .footer__copyright {
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: #ddd;
 }
 
@@ -995,9 +931,6 @@ html {
   .section-2__paragraph {
     width: 90rem;
     right: 10rem;
-  }
-  .section-3 .heading-line {
-    margin-right: 3rem;
   }
 }
 @media (max-width: 1650px) {
@@ -1033,8 +966,7 @@ html {
   }
 }
 @media (max-width: 1200px) {
-  .section-2,
-.section-3 {
+  .section-2 {
     flex-direction: column;
   }
   .heading {
@@ -1051,21 +983,6 @@ html {
     transform: translateX(-50%);
     width: 80rem;
     padding: 1rem 0 1rem 0;
-  }
-  .section-3 {
-    height: auto;
-    padding: 3rem 0 10rem 0;
-  }
-  .section-3 .pricing-cards-wrapper {
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-  }
-  .section-3 .heading {
-    margin-bottom: 5rem;
-  }
-  .section-3 .mySwiper {
-    width: 100%;
   }
 }
 @media (max-width: 900px) {

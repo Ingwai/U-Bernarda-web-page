@@ -16,16 +16,17 @@ navbarList.addEventListener('click', e => {
 // --------------------------------------------------
 
 var swiper = new Swiper('.mySwiper', {
-	effect: 'coverflow',
+	// effect: 'coverflow',
+	effect: 'cards',
 	grabCursor: true,
 	centeredSlides: true,
 	slidesPerView: 'auto',
-	spaceBetween: 0,
+	spaceBetween: 10,
 	coverflowEffect: {
-		rotate: 70,
+		rotate: 0,
 		stretch: 0,
 		depth: 100,
-		modifier: 1,
+		modifier: 2,
 		slideShadows: true,
 	},
 });
