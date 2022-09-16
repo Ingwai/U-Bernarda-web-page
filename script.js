@@ -8,7 +8,7 @@ menu.addEventListener('click', () => {
 
 const navbarList = document.querySelector('.navbar__list');
 
-navbarList.addEventListener('click', e => {
+navbarList.addEventListener('click', (e) => {
 	navbar.classList.toggle('change');
 	menu.classList.toggle('change');
 });
@@ -21,14 +21,17 @@ var swiper = new Swiper('.mySwiper', {
 	grabCursor: true,
 	centeredSlides: true,
 	slidesPerView: 'auto',
-	spaceBetween: 10,
-	coverflowEffect: {
-		rotate: 0,
-		stretch: 0,
-		depth: 100,
-		modifier: 2,
-		slideShadows: true,
-	},
+	spaceBetween: 0,
+	roundLengths: true,
+    loop: true,
+    loopAdditionalSlides: 0,
+	// coverflowEffect: {
+	// 	rotate: 0,
+	// 	stretch: 0,
+	// 	depth: 100,
+	// 	modifier: 3,
+	// 	slideShadows: true,
+	// },
 });
 
 // -----------------------------------------------------------
@@ -40,3 +43,20 @@ accordions.forEach(accordion =>
 		this.classList.toggle('active');
 	})
 );
+
+// -----------------------------------------------------------------
+
+let index = 0;
+
+function carousel() {
+	let slides = document.querySelectorAll('.aboutUs__slide');
+
+	slides.forEach(slide => slide.style.opacity = '0');
+	index++;
+
+	index > slides.length ?	index = 1 : "";
+	slides[index - 1].style.opacity = '1';
+	setTimeout(carousel, 5000);
+}
+
+carousel();

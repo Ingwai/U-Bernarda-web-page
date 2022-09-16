@@ -25,6 +25,10 @@ html {
   margin: 4rem 0;
 }
 
+.heading-white {
+  color: #fff;
+}
+
 .navbar {
   width: 100%;
   height: 10rem;
@@ -146,7 +150,7 @@ html {
 }
 .navbar__logo {
   position: absolute;
-  top: 2.5rem;
+  top: 0.5rem;
   left: 3rem;
 }
 .navbar__logo p {
@@ -154,15 +158,16 @@ html {
   font-size: 3.5rem;
   color: yellow;
   font-weight: 900;
-  letter-spacing: 0.1rem;
+  letter-spacing: 0.3rem;
   text-transform: uppercase;
+  text-align: center;
 }
 .navbar__logo span {
-  display: inline-block;
   font-family: "Lato", sans-serif;
+  display: inline-block;
   font-size: 3.5rem;
   font-weight: 900;
-  color: #9e0e09;
+  color: red;
 }
 .navbar.change {
   height: 100vh;
@@ -190,16 +195,16 @@ html {
   transition: all 0.4s;
 }
 .navbar__list-link::first-letter {
-  color: #9e0e09;
+  color: red;
   font-size: 5rem;
 }
 .navbar__list-link:hover {
-  color: #9e0e09;
+  color: red;
   text-shadow: 0rem 0rem 0.3rem #fff;
 }
 .navbar__list-link:hover::first-letter {
   color: #fff;
-  text-shadow: 0rem 0rem 0.3rem #9e0e09;
+  text-shadow: 0rem 0rem 0.3rem red;
 }
 
 .change .navbar__list {
@@ -234,7 +239,7 @@ html {
 }
 
 .menu:hover .line {
-  background-color: #9e0e09;
+  background-color: red;
 }
 
 .change .line-1 {
@@ -436,42 +441,256 @@ html {
   left: 100%;
 }
 
-.section-2 {
+.aboutUs {
   width: 100%;
   height: 100vh;
   background-color: #222020;
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding: 0 10rem;
   position: relative;
 }
-.section-2__paragraph {
-  width: 100rem;
-  position: absolute;
-  bottom: 5rem;
-  right: 15rem;
+.aboutUs__box {
+  width: 100%;
+  padding: 0 10rem;
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 10rem;
+       column-gap: 10rem;
+}
+.aboutUs__paragraph {
+  width: 60rem;
   font-size: 2rem;
   color: #fff;
-  border-top: 0.3rem double #ddd;
-  border-bottom: 0.3rem double #ddd;
   padding: 2rem 0 2rem 0;
+}
+.aboutUs__paragraph .icon-star {
+  text-align: center;
+}
+.aboutUs__paragraph .icon-star .fa-star {
+  padding: 2rem 1rem;
+}
+.aboutUs__paragraph p {
+  text-indent: 3rem;
+  word-spacing: 0.3rem;
+}
+.aboutUs__paragraph .red {
+  color: red;
+}
+.aboutUs__paragraph .yellow {
+  color: yellow;
+}
+.aboutUs__paragraph b {
+  color: #18b7ff;
+}
+.aboutUs__paragraph .center {
+  display: block;
+  font-size: 2.5rem;
+  text-align: center;
+}
+.aboutUs__wrapper {
+  width: 115rem;
+  height: 68vh;
+  overflow: hidden;
+  position: relative;
+}
+.aboutUs__slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: opacity 1.5s;
+}
+.aboutUs__slide img {
+  width: 100%;
+  background-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  box-shadow: 0.2rem 0.2rem 2rem rgba(0, 0, 0, 0.5);
+}
+
+.section_accordion {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  place-content: center;
+  position: relative;
+}
+
+.accordion-bcg {
+  background: url("./images/oferta.png");
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.2;
+}
+
+.accordion {
+  max-width: 170rem;
+  height: 65rem;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.accordion .contentBox {
+  position: relative;
+  width: 38rem;
+  margin: 1rem 2rem;
+}
+.accordion .contentBox .label {
+  height: 25rem;
+  position: relative;
+  cursor: pointer;
+  filter: brightness(85%);
+  transition: filter 0.3s;
+}
+.accordion .contentBox .label:hover {
+  filter: brightness(100%);
+}
+.accordion .contentBox .label h3 {
+  text-align: center;
+  font-size: 3.5em;
+  font-family: "Oswald", sans-serif;
+  color: #fff;
+}
+.accordion .contentBox .content {
+  position: relative;
+  background: #fff;
+  height: 0;
+  padding: 0 1rem;
+  overflow: hidden;
+  transition: height 1s, padding 0.5s;
+  overflow-y: auto;
+  font-size: 2em;
+  border-bottom-left-radius: 10%;
+  border-bottom-right-radius: 10%;
+}
+.accordion .contentBox.active .content {
+  height: 40rem;
+  padding: 1rem 1rem;
+}
+.accordion .contentBox-1 .label {
+  background: url("./images/mechanika.jpg") no-repeat;
+  background-size: cover;
+}
+.accordion .contentBox-1 .label h3 {
+  background-image: linear-gradient(to right, #087285, rgb(13, 165, 211));
+}
+.accordion .contentBox-1 .content {
+  background: rgb(112, 209, 238);
+}
+.accordion .contentBox-2 .label {
+  background: url("./images/motor.jpg") no-repeat;
+  background-size: cover;
+}
+.accordion .contentBox-2 .label h3 {
+  background-image: linear-gradient(to right, #946809, rgb(189, 186, 14));
+}
+.accordion .contentBox-2 .content {
+  background: rgba(230, 228, 112, 0.9);
+}
+.accordion .contentBox-3 .label {
+  background: url("./images/wulkanizacja.jpg") no-repeat;
+  background-size: cover;
+}
+.accordion .contentBox-3 .label h3 {
+  background-image: linear-gradient(to right, #a10c14, rgb(226, 59, 59));
+}
+.accordion .contentBox-3 .content {
+  background: rgba(226, 142, 142, 0.9);
+}
+.accordion .contentBox-4 .label {
+  background: url("./images/road-mountain.jpg") no-repeat;
+  background-size: cover;
+}
+.accordion .contentBox-4 .label h3 {
+  background-image: linear-gradient(to right, #0b7e48, rgb(59, 226, 134));
+}
+.accordion .contentBox-4 .content {
+  background: rgba(133, 226, 175, 0.9);
+}
+
+.shop {
+  min-height: 100vh;
+  width: 100%;
+  background: rgb(177, 209, 228);
+  font-family: sans-serif;
+  display: flex;
+  justify-content: start;
   flex-direction: column;
+  align-items: center;
+  background-color: #333;
+}
+.shop .signBox {
+  width: 100%;
+  height: 100%;
+}
+.shop .sign {
+  padding: 0 10rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  -moz-column-gap: 3rem;
+       column-gap: 3rem;
+  background-color: white;
+}
+.shop .sign img {
+  width: 7rem;
+  height: 7rem;
+  transition: all 0.3s;
+}
+.shop .sign img:hover {
+  transform: scale(1.34);
+}
+.shop .shopBox {
+  display: flex;
   justify-content: center;
   align-items: center;
-  text-align: justify;
-  text-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.5);
+  margin: 0 10vmin;
+  overflow: hidden;
 }
-.section-2__paragraph .fa-quote-left {
-  align-self: flex-start;
-  font-size: 3rem;
-  margin-bottom: 1rem;
+.shop .shopBox .card {
+  flex: 1;
+  transition: all 1s ease-in-out;
+  height: 70vmin;
+  position: relative;
 }
-.section-2__paragraph .fa-quote-right {
-  margin-top: 1rem;
-  align-self: flex-end;
-  font-size: 3rem;
+.shop .shopBox .card .card__head {
+  color: black;
+  padding: 0.5em;
+  transition: transform 0.5s linear;
+  min-width: 100%;
+  text-align: center;
+  position: absolute;
+  bottom: -6rem;
+  font-size: 2rem;
+  white-space: nowrap;
+}
+.shop .shopBox .card:hover {
+  flex-grow: 5;
+}
+.shop .shopBox .card:hover img {
+  filter: grayscale(0%);
+}
+.shop .shopBox .card:hover .card__head {
+  text-align: center;
+  color: white;
+  background: rgba(0, 0, 0, 0.7);
+  font-size: 2rem;
+  transform: translateY(-6rem);
+}
+.shop .shopBox .card img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: all 1s ease-in-out;
+  filter: grayscale(100%);
+}
+.shop .shopBox .card:not(:nth-child(5)) {
+  margin-right: 1rem;
 }
 
 .opinion {
@@ -485,9 +704,6 @@ html {
 .opinion-cards-wrapper {
   width: 100%;
   padding: 3rem 0;
-}
-.opinion-heading {
-  color: #fff;
 }
 .opinion-card {
   background-image: url("./images/opinion.jpg");
@@ -534,118 +750,14 @@ html {
   filter: blur(0rem);
 }
 
-.section_accordion {
-  width: 100%;
-  height: 100vh;
-  display: grid;
-  place-content: center;
-  position: relative;
-}
-
-.accordion-bcg {
-  background: url("./images/oferta.png");
-  background-size: cover;
-  background-position: bottom;
-  background-repeat: no-repeat;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  opacity: 0.2;
-}
-
-.accordion {
-  max-width: 150rem;
-  height: 65rem;
-  display: flex;
-}
-.accordion .contentBox {
-  position: relative;
-  margin: 1rem 2rem;
-}
-.accordion .contentBox .label {
-  height: 25rem;
-  position: relative;
-  cursor: pointer;
-}
-.accordion .contentBox .label h3 {
-  text-align: center;
-  font-size: 3.5em;
-  font-family: "Oswald", sans-serif;
-  color: #fff;
-}
-.accordion .contentBox .label::before {
-  content: "+";
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 2rem;
-  font-size: 3.5em;
-}
-.accordion .contentBox .content {
-  position: relative;
-  background: #fff;
-  height: 0;
-  padding: 0 1rem;
-  overflow: hidden;
-  transition: height 1s, padding 0.5s;
-  overflow-y: none;
-  font-size: 2em;
-  border-bottom-left-radius: 10%;
-  border-bottom-right-radius: 10%;
-}
-.accordion .contentBox.active .content {
-  height: 40rem;
-  padding: 1rem 1rem;
-}
-.accordion .contentBox-1 .label {
-  background: url("./images/mechanika.jpg") no-repeat;
-  background-size: cover;
-}
-.accordion .contentBox-1 .label h3 {
-  background-image: linear-gradient(to right, #087285, rgb(13, 165, 211));
-}
-.accordion .contentBox-1 .content {
-  background: rgba(13, 165, 211, 0.9);
-}
-.accordion .contentBox-2 .label {
-  background: url("./images/motor.jpg") no-repeat;
-  background-size: cover;
-}
-.accordion .contentBox-2 .label h3 {
-  background-image: linear-gradient(to right, #946809, rgb(189, 186, 14));
-}
-.accordion .contentBox-2 .content {
-  background: rgba(189, 186, 14, 0.9);
-}
-.accordion .contentBox-3 .label {
-  background: url("./images/wulkanizacja.jpg") no-repeat;
-  background-size: cover;
-}
-.accordion .contentBox-3 .label h3 {
-  background-image: linear-gradient(to right, #a10c14, rgb(226, 59, 59));
-}
-.accordion .contentBox-3 .content {
-  background: rgba(226, 59, 59, 0.9);
-}
-.accordion .contentBox-4 .label {
-  background: url("./images/road-mountain.jpg") no-repeat;
-  background-size: cover;
-}
-.accordion .contentBox-4 .label h3 {
-  background-image: linear-gradient(to right, #0b7e48, rgb(59, 226, 134));
-}
-.accordion .contentBox-4 .content {
-  background: rgba(59, 226, 134, 0.9);
-}
-
 .contactUs {
-  background-image: linear-gradient(to right, rgba(235, 137, 137, 0.3), rgba(245, 245, 191, 0.3)), url(./images/road-mountain.jpg);
+  background-image: linear-gradient(to right, rgba(40, 96, 180, 0.3) 5%, rgba(255, 255, 255, 0.6)), url(./images/road-mountain.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
   width: 100%;
   height: 100vh;
-  padding: 30px 100px;
+  padding: 3rem 10rem;
 }
 
 .contactUs__title {
@@ -743,6 +855,9 @@ html {
   outline: none;
   border: 1px solid #333;
 }
+.contactUs__inputBox input:focus {
+  border: 0.2rem solid red;
+}
 
 .contactUs__inputBox textarea {
   padding: 1rem;
@@ -756,7 +871,7 @@ html {
 
 .contactUs__btnSubmit input[type=submit] {
   font-family: "Oswald", sans-serif;
-  background: #9e0e09;
+  background: red;
   color: #fff;
   border: none;
   font-size: 2rem;
@@ -905,47 +1020,26 @@ html {
   transition: color 0.3s, scale 0.4s;
 }
 .footer__nav a::first-letter {
-  color: #862323;
+  color: red;
   font-size: 2.8rem;
 }
 .footer__nav a:hover {
-  color: #862323;
+  color: red;
   scale: 1.1;
   text-shadow: 0rem 0rem 0.3rem #fff;
 }
 .footer__nav a:hover::first-letter {
   color: #fff;
-  text-shadow: 0rem 0rem 0.3rem #9e0e09;
+  text-shadow: 0rem 0rem 0.3rem red;
 }
 .footer__copyright {
   font-size: 1.5rem;
   color: #ddd;
 }
 
-@media (max-width: 1800px) {
-  .section-2__video-wrapper {
-    width: 90rem;
-    height: 45rem;
-    right: 10rem;
-  }
-  .section-2__paragraph {
-    width: 90rem;
-    right: 10rem;
-  }
-}
 @media (max-width: 1650px) {
   html {
     font-size: 57%;
-  }
-  .section-2__video-wrapper {
-    width: 85rem;
-    height: 40rem;
-    right: 5rem;
-  }
-  .section-2__paragraph {
-    width: 85rem;
-    right: 5rem;
-    bottom: 10rem;
   }
 }
 @media (max-width: 1500px) {
@@ -966,23 +1060,8 @@ html {
   }
 }
 @media (max-width: 1200px) {
-  .section-2 {
-    flex-direction: column;
-  }
   .heading {
     margin-top: 5rem;
-  }
-  .section-2__video-wrapper {
-    top: 25%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80rem;
-  }
-  .section-2__paragraph {
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80rem;
-    padding: 1rem 0 1rem 0;
   }
 }
 @media (max-width: 900px) {
@@ -1078,18 +1157,6 @@ html {
 @media (max-width: 550px) {
   html {
     font-size: 32%;
-  }
-  .section-2 {
-    height: 75vh;
-  }
-  .section-2__video-wrapper {
-    top: 25%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 65rem;
-  }
-  .section-2__paragraph {
-    width: 65rem;
   }
   .section-1__banner-heading span {
     font-size: 4.5rem;
