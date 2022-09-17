@@ -1,5 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+$color-shadow: rgba(0, 0, 0, 0.5);
+$color-text: #fff;
+$color-brand-1: red;
+
+@mixin boxShadow {
+	box-shadow: 0.4rem 0.5rem 1.5rem rgba(0, 0, 0, 0.3);
+}
 
 * {
 	margin: 0;
@@ -16,11 +21,6 @@ html {
 	scroll-behavior: smooth;
 }
 
-$color-shadow: rgba(0, 0, 0, 0.5);
-$color-text: #fff;
-$color-heading: #ddd;
-$color-brand-1: red;
-
 .heading {
 	font-family: 'Audiowide', cursive;
 	font-size: 5rem;
@@ -28,13 +28,13 @@ $color-brand-1: red;
 	color: $color-brand-1;
 	text-transform: uppercase;
 	text-align: center;
-	margin: 4rem 0;
+	margin: 10rem 0 5rem 0;
 }
 
 .heading-white {
 	color: $color-text;
+	margin: 10rem 0 5rem 0;
 }
-
 
 // Navbar
 
@@ -248,9 +248,11 @@ $color-brand-1: red;
 	transform: translate(65%, -1.6rem) rotate(35deg);
 }
 // End of MENU
-// Section 1
 
-.section-1 {
+
+// Home
+
+.home {
 	width: 100%;
 	height: 100vh;
 	position: relative;
@@ -378,6 +380,9 @@ $color-brand-1: red;
 		}
 
 		&-btn {
+			display: block;
+			margin: 0 auto;
+			padding-top: 1.2rem;
 			width: 30rem;
 			height: 6rem;
 			background-image: linear-gradient(to right, #9b0e0e, #7a1010);
@@ -389,11 +394,11 @@ $color-brand-1: red;
 			box-shadow: 1rem 2rem 3rem $color-shadow;
 			text-shadow: 0.6rem 0.3rem 0.2rem $color-shadow;
 			cursor: pointer;
-			opacity: 0;
 			visibility: hidden;
 			animation: fadeAnime 2s 2s forwards;
 			position: relative;
 			overflow: hidden;
+			opacity: 0;
 		}
 
 		&-btn::before {
@@ -429,7 +434,7 @@ $color-brand-1: red;
 
 	&__box {
 		width: 100%;
-		padding: 0 10rem;
+		padding: 0rem 10rem;
 		display: flex;
 		align-items: center;
 		column-gap: 10rem;
@@ -496,9 +501,9 @@ $color-brand-1: red;
 
 // End of AboutUs
 
-// Accordion
+// Offer
 
-.section_accordion {
+.section__offer {
 	width: 100%;
 	height: 100vh;
 	display: grid;
@@ -506,7 +511,7 @@ $color-brand-1: red;
 	position: relative;
 }
 
-.accordion-bcg {
+.offer-bcg {
 	background: url('./images/oferta.png');
 	background-size: cover;
 	background-position: bottom;
@@ -517,7 +522,7 @@ $color-brand-1: red;
 	opacity: 0.2;
 }
 
-.accordion {
+.offer {
 	max-width: 170rem;
 	height: 65rem;
 	display: flex;
@@ -531,6 +536,7 @@ $color-brand-1: red;
 
 		.label {
 			height: 25rem;
+			@include boxShadow;
 			position: relative;
 			cursor: pointer;
 			filter: brightness(85%);
@@ -556,9 +562,9 @@ $color-brand-1: red;
 			overflow: hidden;
 			transition: height 1s, padding 0.5s;
 			overflow-y: auto;
-			font-size: 2em;
-			border-bottom-left-radius: 10%;
-			border-bottom-right-radius: 10%;
+			font-size: 2rem;
+			border-bottom-left-radius: 2rem;
+			border-bottom-right-radius: 2rem;
 		}
 
 		&.active .content {
@@ -626,7 +632,7 @@ $color-brand-1: red;
 		}
 	}
 }
-// End of accordion
+// End of offer
 
 // Shop
 
@@ -639,7 +645,7 @@ $color-brand-1: red;
 	justify-content: start;
 	flex-direction: column;
 	align-items: center;
-	background-color: #333;
+	background-color: rgb(73, 72, 72);
 
 	.signBox {
 		width: 100%;
@@ -653,16 +659,14 @@ $color-brand-1: red;
 		justify-content: space-around;
 		column-gap: 3rem;
 		// background: linear-gradient(90deg, rgb(115, 248, 115) 0%, rgb(241, 101, 204) 100%);
-		background-color: white;
+		background-color: #fff;
 
 		img {
 			width: 7rem;
 			height: 7rem;
-			// filter: grayscale(100%);
 			transition: all 0.3s;
 			&:hover {
-				// filter: grayscale(0%);
-				transform: scale(1.34);
+				transform: scale(1.3);
 			}
 		}
 	}
@@ -679,7 +683,7 @@ $color-brand-1: red;
 			transition: all 1s ease-in-out;
 			height: 70vmin;
 			position: relative;
-
+		
 			.card__head {
 				color: black;
 				padding: 0.5em;
@@ -808,7 +812,7 @@ $color-brand-1: red;
 	position: relative;
 	width: 100%;
 	height: 100vh;
-	padding: 3rem 10rem;
+	padding: 0.1rem 10rem;
 }
 
 .contactUs__title {
@@ -816,11 +820,6 @@ $color-brand-1: red;
 	justify-content: center;
 	align-items: center;
 	font-size: 4rem;
-}
-
-.contactUs__heading {
-	color: #fff;
-	font-weight: 500;
 }
 
 .contactUs__form {
@@ -841,7 +840,7 @@ $color-brand-1: red;
 	padding: 3rem;
 	background: rgba(83, 81, 81, 0.4);
 	backdrop-filter: blur(5px);
-	box-shadow: 0.4rem 0.5rem 1.5rem rgba(0, 0, 0, 0.3);
+	@include boxShadow;
 }
 
 .contactUs__infobox {
@@ -852,7 +851,7 @@ $color-brand-1: red;
 	position: relative;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 1fr 1fr;
+	grid-template-rows: 0.9fr 0.9fr;
 	grid-template-areas: 'form info' 'form map';
 	grid-gap: 2rem;
 	margin-top: 2rem;
@@ -889,11 +888,15 @@ $color-brand-1: red;
 	width: 100%;
 }
 
+.contactUs__row100 {
+	text-align: center;
+}
+
 .contactUs__inputBox span {
 	font-family: 'Oswald', sans-serif;
 	font-size: 1.8rem;
 	color: $color-text;
-	margin-top: 1rem;
+	margin-top: 2rem;
 	margin-bottom: 0.5rem;
 	font-weight: 500;
 }
@@ -917,6 +920,10 @@ $color-brand-1: red;
 	resize: none;
 	min-height: 20rem;
 	margin-bottom: 1rem;
+
+	&:focus {
+		border: 0.2rem solid $color-brand-1;
+	}
 }
 
 .contactUs__btnSubmit input[type='submit'] {
@@ -928,11 +935,11 @@ $color-brand-1: red;
 	max-width: 12rem;
 	font-weight: 500;
 	cursor: pointer;
-	padding: 1.4rem 1.5rem;
-	transition: background-color 0.3s;
+	padding: 1.4rem 2.5rem;
+	transition: background-color 0.5s;
 
 	&:hover {
-		background-color: #850404;
+		background-color: #18b7ff;
 	}
 }
 
@@ -1010,41 +1017,6 @@ $color-brand-1: red;
 	color: $color-text;
 }
 
-/* Responsive  */
-
-@media (max-width: 991px) {
-	body {
-		background-color: #03a9f5;
-	}
-	.contactUs {
-		padding: 20px;
-	}
-
-	.contactUs__box {
-		grid-template-columns: 1fr;
-		grid-template-rows: auto;
-		grid-template-areas: 'form' 'info' 'map';
-	}
-
-	.contactUs__row50 {
-		gap: 0;
-		flex-direction: column;
-	}
-
-	.contactUs__inputBox {
-		width: 100%;
-	}
-
-	.contactUs__contact {
-		padding: 30px;
-	}
-
-	.contactUs__map {
-		padding: 0;
-		min-height: 300px;
-	}
-}
-
 // footer
 
 .footer {
@@ -1118,7 +1090,7 @@ $color-brand-1: red;
 		font-size: 50%;
 	}
 
-	.section-1 {
+	.home {
 		&__banner-heading span {
 			font-size: 10rem;
 		}
@@ -1136,12 +1108,44 @@ $color-brand-1: red;
 	}
 }
 
+
+@media (max-width: 991px) {
+	.contactUs {
+		padding: 20px;
+	}
+
+	.contactUs__box {
+		grid-template-columns: 1fr;
+		grid-template-rows: auto;
+		grid-template-areas: 'form' 'info' 'map';
+	}
+
+	.contactUs__row50 {
+		gap: 0;
+		flex-direction: column;
+	}
+
+	.contactUs__inputBox {
+		width: 100%;
+	}
+
+	.contactUs__contact {
+		padding: 30px;
+	}
+
+	.contactUs__map {
+		padding: 0;
+		min-height: 300px;
+	}
+}
+
+
 @media (max-width: 900px) {
 	html {
 		font-size: 45%;
 	}
 
-	.section-1 {
+	.home {
 		&__banner {
 			top: 30%;
 		}
@@ -1164,7 +1168,7 @@ $color-brand-1: red;
 		font-size: 40%;
 	}
 
-	.section-1 {
+	.home {
 		&__banner-heading span {
 			font-size: 8rem;
 			letter-spacing: 1.5rem;
@@ -1221,7 +1225,7 @@ $color-brand-1: red;
 		font-size: 32%;
 	}
 
-	.section-1 {
+	.home {
 		&__banner-heading span {
 			font-size: 4.5rem;
 			letter-spacing: 1rem;

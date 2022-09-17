@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Audiowide&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -22,11 +20,12 @@ html {
   color: red;
   text-transform: uppercase;
   text-align: center;
-  margin: 4rem 0;
+  margin: 10rem 0 5rem 0;
 }
 
 .heading-white {
   color: #fff;
+  margin: 10rem 0 5rem 0;
 }
 
 .navbar {
@@ -250,12 +249,12 @@ html {
   transform: translate(65%, -1.6rem) rotate(35deg);
 }
 
-.section-1 {
+.home {
   width: 100%;
   height: 100vh;
   position: relative;
 }
-.section-1__video {
+.home__video {
   position: absolute;
   top: 0;
   left: 0;
@@ -265,13 +264,13 @@ html {
   opacity: 0.7;
   overflow: hidden;
 }
-.section-1__video-content {
+.home__video-content {
   height: 100%;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.section-1__banner {
+.home__banner {
   width: 100%;
   position: absolute;
   top: 20%;
@@ -279,13 +278,13 @@ html {
   transform: translateX(-50%);
   text-align: center;
 }
-.section-1__banner-heading {
+.home__banner-heading {
   margin-bottom: 4rem;
   height: 20rem;
   perspective: 50rem;
   overflow: hidden;
 }
-.section-1__banner-heading span {
+.home__banner-heading span {
   font-family: "Oswald", sans-serif;
   font-size: 12rem;
   font-weight: 400;
@@ -300,19 +299,19 @@ html {
   opacity: 0;
   letter-spacing: 3rem;
 }
-.section-1__banner-heading-1 {
+.home__banner-heading-1 {
   -webkit-animation: animateHeading 12s 3s infinite;
           animation: animateHeading 12s 3s infinite;
 }
-.section-1__banner-heading-2 {
+.home__banner-heading-2 {
   -webkit-animation: animateHeading 12s 6s infinite;
           animation: animateHeading 12s 6s infinite;
 }
-.section-1__banner-heading-3 {
+.home__banner-heading-3 {
   -webkit-animation: animateHeading 12s 9s infinite;
           animation: animateHeading 12s 9s infinite;
 }
-.section-1__banner-heading-4 {
+.home__banner-heading-4 {
   -webkit-animation: animateHeading 12s 12s infinite;
           animation: animateHeading 12s 12s infinite;
 }
@@ -370,7 +369,7 @@ html {
     letter-spacing: 3rem;
   }
 }
-.section-1__banner-paragraph {
+.home__banner-paragraph {
   font-size: 4rem;
   font-weight: 400;
   text-transform: uppercase;
@@ -407,7 +406,10 @@ html {
     visibility: visible;
   }
 }
-.section-1__banner-btn {
+.home__banner-btn {
+  display: block;
+  margin: 0 auto;
+  padding-top: 1.2rem;
   width: 30rem;
   height: 6rem;
   background-image: linear-gradient(to right, #9b0e0e, #7a1010);
@@ -419,14 +421,14 @@ html {
   box-shadow: 1rem 2rem 3rem rgba(0, 0, 0, 0.5);
   text-shadow: 0.6rem 0.3rem 0.2rem rgba(0, 0, 0, 0.5);
   cursor: pointer;
-  opacity: 0;
   visibility: hidden;
   -webkit-animation: fadeAnime 2s 2s forwards;
           animation: fadeAnime 2s 2s forwards;
   position: relative;
   overflow: hidden;
+  opacity: 0;
 }
-.section-1__banner-btn::before {
+.home__banner-btn::before {
   content: "";
   width: 100%;
   height: 100%;
@@ -437,7 +439,7 @@ html {
   transform: skewX -30deg;
   transition: left 0.5s;
 }
-.section-1__banner-btn:hover::before {
+.home__banner-btn:hover::before {
   left: 100%;
 }
 
@@ -452,7 +454,7 @@ html {
 }
 .aboutUs__box {
   width: 100%;
-  padding: 0 10rem;
+  padding: 0rem 10rem;
   display: flex;
   align-items: center;
   -moz-column-gap: 10rem;
@@ -508,7 +510,7 @@ html {
   box-shadow: 0.2rem 0.2rem 2rem rgba(0, 0, 0, 0.5);
 }
 
-.section_accordion {
+.section__offer {
   width: 100%;
   height: 100vh;
   display: grid;
@@ -516,7 +518,7 @@ html {
   position: relative;
 }
 
-.accordion-bcg {
+.offer-bcg {
   background: url("./images/oferta.png");
   background-size: cover;
   background-position: bottom;
@@ -527,35 +529,36 @@ html {
   opacity: 0.2;
 }
 
-.accordion {
+.offer {
   max-width: 170rem;
   height: 65rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
-.accordion .contentBox {
+.offer .contentBox {
   position: relative;
   width: 38rem;
   margin: 1rem 2rem;
 }
-.accordion .contentBox .label {
+.offer .contentBox .label {
   height: 25rem;
+  box-shadow: 0.4rem 0.5rem 1.5rem rgba(0, 0, 0, 0.3);
   position: relative;
   cursor: pointer;
   filter: brightness(85%);
   transition: filter 0.3s;
 }
-.accordion .contentBox .label:hover {
+.offer .contentBox .label:hover {
   filter: brightness(100%);
 }
-.accordion .contentBox .label h3 {
+.offer .contentBox .label h3 {
   text-align: center;
   font-size: 3.5em;
   font-family: "Oswald", sans-serif;
   color: #fff;
 }
-.accordion .contentBox .content {
+.offer .contentBox .content {
   position: relative;
   background: #fff;
   height: 0;
@@ -563,52 +566,52 @@ html {
   overflow: hidden;
   transition: height 1s, padding 0.5s;
   overflow-y: auto;
-  font-size: 2em;
-  border-bottom-left-radius: 10%;
-  border-bottom-right-radius: 10%;
+  font-size: 2rem;
+  border-bottom-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
 }
-.accordion .contentBox.active .content {
+.offer .contentBox.active .content {
   height: 40rem;
   padding: 1rem 1rem;
 }
-.accordion .contentBox-1 .label {
+.offer .contentBox-1 .label {
   background: url("./images/mechanika.jpg") no-repeat;
   background-size: cover;
 }
-.accordion .contentBox-1 .label h3 {
+.offer .contentBox-1 .label h3 {
   background-image: linear-gradient(to right, #087285, rgb(13, 165, 211));
 }
-.accordion .contentBox-1 .content {
+.offer .contentBox-1 .content {
   background: rgb(112, 209, 238);
 }
-.accordion .contentBox-2 .label {
+.offer .contentBox-2 .label {
   background: url("./images/motor.jpg") no-repeat;
   background-size: cover;
 }
-.accordion .contentBox-2 .label h3 {
+.offer .contentBox-2 .label h3 {
   background-image: linear-gradient(to right, #946809, rgb(189, 186, 14));
 }
-.accordion .contentBox-2 .content {
+.offer .contentBox-2 .content {
   background: rgba(230, 228, 112, 0.9);
 }
-.accordion .contentBox-3 .label {
+.offer .contentBox-3 .label {
   background: url("./images/wulkanizacja.jpg") no-repeat;
   background-size: cover;
 }
-.accordion .contentBox-3 .label h3 {
+.offer .contentBox-3 .label h3 {
   background-image: linear-gradient(to right, #a10c14, rgb(226, 59, 59));
 }
-.accordion .contentBox-3 .content {
+.offer .contentBox-3 .content {
   background: rgba(226, 142, 142, 0.9);
 }
-.accordion .contentBox-4 .label {
+.offer .contentBox-4 .label {
   background: url("./images/road-mountain.jpg") no-repeat;
   background-size: cover;
 }
-.accordion .contentBox-4 .label h3 {
+.offer .contentBox-4 .label h3 {
   background-image: linear-gradient(to right, #0b7e48, rgb(59, 226, 134));
 }
-.accordion .contentBox-4 .content {
+.offer .contentBox-4 .content {
   background: rgba(133, 226, 175, 0.9);
 }
 
@@ -621,7 +624,7 @@ html {
   justify-content: start;
   flex-direction: column;
   align-items: center;
-  background-color: #333;
+  background-color: rgb(73, 72, 72);
 }
 .shop .signBox {
   width: 100%;
@@ -634,7 +637,7 @@ html {
   justify-content: space-around;
   -moz-column-gap: 3rem;
        column-gap: 3rem;
-  background-color: white;
+  background-color: #fff;
 }
 .shop .sign img {
   width: 7rem;
@@ -642,7 +645,7 @@ html {
   transition: all 0.3s;
 }
 .shop .sign img:hover {
-  transform: scale(1.34);
+  transform: scale(1.3);
 }
 .shop .shopBox {
   display: flex;
@@ -757,7 +760,7 @@ html {
   position: relative;
   width: 100%;
   height: 100vh;
-  padding: 3rem 10rem;
+  padding: 0.1rem 10rem;
 }
 
 .contactUs__title {
@@ -765,11 +768,6 @@ html {
   justify-content: center;
   align-items: center;
   font-size: 4rem;
-}
-
-.contactUs__heading {
-  color: #fff;
-  font-weight: 500;
 }
 
 .contactUs__form {
@@ -803,7 +801,7 @@ html {
   position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 0.9fr 0.9fr;
   grid-template-areas: "form info" "form map";
   grid-gap: 2rem;
   margin-top: 2rem;
@@ -840,11 +838,15 @@ html {
   width: 100%;
 }
 
+.contactUs__row100 {
+  text-align: center;
+}
+
 .contactUs__inputBox span {
   font-family: "Oswald", sans-serif;
   font-size: 1.8rem;
   color: #fff;
-  margin-top: 1rem;
+  margin-top: 2rem;
   margin-bottom: 0.5rem;
   font-weight: 500;
 }
@@ -868,6 +870,9 @@ html {
   min-height: 20rem;
   margin-bottom: 1rem;
 }
+.contactUs__inputBox textarea:focus {
+  border: 0.2rem solid red;
+}
 
 .contactUs__btnSubmit input[type=submit] {
   font-family: "Oswald", sans-serif;
@@ -878,11 +883,11 @@ html {
   max-width: 12rem;
   font-weight: 500;
   cursor: pointer;
-  padding: 1.4rem 1.5rem;
-  transition: background-color 0.3s;
+  padding: 1.4rem 2.5rem;
+  transition: background-color 0.5s;
 }
 .contactUs__btnSubmit input[type=submit]:hover {
-  background-color: #850404;
+  background-color: #18b7ff;
 }
 
 .contactUs__inputBox::-moz-placeholder {
@@ -967,34 +972,6 @@ html {
   color: #fff;
 }
 
-/* Responsive  */
-@media (max-width: 991px) {
-  body {
-    background-color: #03a9f5;
-  }
-  .contactUs {
-    padding: 20px;
-  }
-  .contactUs__box {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    grid-template-areas: "form" "info" "map";
-  }
-  .contactUs__row50 {
-    gap: 0;
-    flex-direction: column;
-  }
-  .contactUs__inputBox {
-    width: 100%;
-  }
-  .contactUs__contact {
-    padding: 30px;
-  }
-  .contactUs__map {
-    padding: 0;
-    min-height: 300px;
-  }
-}
 .footer {
   width: 100%;
   height: 12rem;
@@ -1051,10 +1028,10 @@ html {
   html {
     font-size: 50%;
   }
-  .section-1__banner-heading span {
+  .home__banner-heading span {
     font-size: 10rem;
   }
-  .section-1__banner-paragraph {
+  .home__banner-paragraph {
     width: 45rem;
     font-size: 3rem;
   }
@@ -1064,14 +1041,38 @@ html {
     margin-top: 5rem;
   }
 }
+@media (max-width: 991px) {
+  .contactUs {
+    padding: 20px;
+  }
+  .contactUs__box {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "form" "info" "map";
+  }
+  .contactUs__row50 {
+    gap: 0;
+    flex-direction: column;
+  }
+  .contactUs__inputBox {
+    width: 100%;
+  }
+  .contactUs__contact {
+    padding: 30px;
+  }
+  .contactUs__map {
+    padding: 0;
+    min-height: 300px;
+  }
+}
 @media (max-width: 900px) {
   html {
     font-size: 45%;
   }
-  .section-1__banner {
+  .home__banner {
     top: 30%;
   }
-  .section-1__banner-heading span {
+  .home__banner-heading span {
     font-size: 10rem;
   }
   .footer {
@@ -1085,7 +1086,7 @@ html {
   html {
     font-size: 40%;
   }
-  .section-1__banner-heading span {
+  .home__banner-heading span {
     font-size: 8rem;
     letter-spacing: 1.5rem;
   }
@@ -1158,7 +1159,7 @@ html {
   html {
     font-size: 32%;
   }
-  .section-1__banner-heading span {
+  .home__banner-heading span {
     font-size: 4.5rem;
     letter-spacing: 1rem;
   }
