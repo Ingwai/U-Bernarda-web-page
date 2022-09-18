@@ -1,0 +1,168 @@
+.navbar {
+	width: 100%;
+	height: 10rem;
+	background-color: rgba(0, 0, 0, 0.85);
+	backdrop-filter: blur(7px);
+	height: 10rem;
+	position: fixed;
+	top: -20rem;
+	z-index: 10;
+	padding: 3rem;
+	transition: height 0.5s;
+	animation: animateNavbar 1s 0.5s forwards;
+
+	@keyframes animateNavbar {
+		from {
+			top: -8rem;
+		}
+		to {
+			top: 0rem;
+		}
+	}
+
+	&__autobox {
+		top: 0;
+		left: -35rem;
+		width: 30rem;
+		height: 10rem;
+		position: absolute;
+		z-index: 100;
+		// animation: carMove 15s cubic-bezier(0.04, 1.01, 0.87, 0.06) infinite 1.2s, carRide 0.4s linear infinite;
+		animation: carMove 15s cubic-bezier(0.18, 0.84, 0.85, 0.35) infinite 1.2s, carRide 0.4s linear infinite;
+
+		@keyframes carMove {
+			0% {
+				left: -35rem;
+			}
+
+			100% {
+				left: 100%;
+			}
+		}
+
+		@keyframes carRide {
+			0% {
+				transform: translateY(-0.07rem);
+			}
+
+			100% {
+				transform: translateY(0rem);
+			}
+		}
+
+		&-content img {
+			top: 0;
+			left: 0;
+			position: absolute;
+			width: 100%;
+		}
+
+		&-wheel1 {
+			top: 4.4rem;
+			left: 20.6em;
+			position: absolute;
+			width: 14.4%;
+			height: 14.4%;
+
+			img {
+				transform-origin: center;
+				animation: animateWheel 0.5s linear infinite;
+			}
+		}
+
+		&-wheel2 {
+			top: 4.4rem;
+			left: 3.4rem;
+			position: absolute;
+			width: 14.4%;
+			height: 14.4%;
+
+			img {
+				transform-origin: center;
+				animation: animateWheel 0.5s linear infinite;
+			}
+		}
+
+		@keyframes animateWheel {
+			0% {
+				rotate: 0deg;
+			}
+			100% {
+				rotate: 360deg;
+			}
+		}
+	}
+
+	&__logo {
+		position: absolute;
+		top: 0.5rem;
+		left: 3rem;
+
+		p {
+			font-family: 'Lato', sans-serif;
+			font-size: 3.5rem;
+			color: yellow;
+			font-weight: 900;
+			letter-spacing: 0.3rem;
+			text-transform: uppercase;
+			text-align: center;
+		}
+
+		span {
+			font-family: 'Lato', sans-serif;
+			display: inline-block;
+			font-size: 3.5rem;
+			font-weight: 900;
+			color: $color-brand-1;
+		}
+	}
+
+	&.change {
+		height: 100vh;
+	}
+
+	&__list {
+		position: absolute;
+		top: 25%;
+		left: 50%;
+		transform: translateX(-50%);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 4rem;
+		opacity: 0;
+		visibility: hidden;
+		transition: all 0.6s;
+
+		&-link {
+			font-family: 'Lato', sans-serif;
+			font-size: 4rem;
+			color: $color-text;
+			font-weight: 900;
+			letter-spacing: 0.3rem;
+			text-transform: uppercase;
+			transition: all 0.4s;
+
+			&::first-letter {
+				color: $color-brand-1;
+				font-size: 5rem;
+			}
+
+			&:hover {
+				color: $color-brand-1;
+				text-shadow: 0rem 0rem 0.3rem $color-text;
+			}
+
+			&:hover::first-letter {
+				color: $color-text;
+				text-shadow: 0rem 0rem 0.3rem $color-brand-1;
+			}
+		}
+	}
+}
+
+.change .navbar__list {
+	opacity: 1;
+	visibility: visible;
+	transition: all 0.6s 0.4s;
+}

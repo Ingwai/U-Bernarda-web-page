@@ -1,0 +1,38 @@
+.menu {
+	width: 4rem;
+	height: 4rem;
+	position: fixed;
+	z-index: 100;
+	right: 2rem;
+	top: 2.8rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+	cursor: pointer;
+
+	.line {
+		width: 100%;
+		height: 0.1rem;
+		background-color: $color-text;
+		transition: all 0.5s;
+	}
+
+	.line-1,
+	.line-3 {
+		width: 50%;
+		transition: transform 0.5s;
+	}
+}
+
+.menu:hover .line {
+	background-color: $color-brand-1;
+}
+
+.change .line-1 {
+	transform: translate(65%, 1.6rem) rotate(-35deg);
+}
+
+.change .line-3 {
+	transform: translate(65%, -1.6rem) rotate(35deg);
+}

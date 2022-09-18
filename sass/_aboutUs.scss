@@ -1,0 +1,75 @@
+.aboutUs {
+	width: 100%;
+	height: 100vh;
+	background-color: #222020;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	position: relative;
+
+	&__box {
+		width: 100%;
+		padding: 0rem 10rem;
+		display: flex;
+		align-items: center;
+		column-gap: 10rem;
+	}
+
+	&__paragraph {
+		width: 60rem;
+		font-size: 2rem;
+		color: $color-text;
+		padding: 2rem 0 2rem 0;
+
+		.icon-star {
+			text-align: center;
+			.fa-star {
+				padding: 2rem 1rem;
+			}
+		}
+
+		p {
+			text-indent: 3rem;
+			word-spacing: 0.3rem;
+		}
+
+		.red {
+			color: red;
+		}
+
+		.yellow {
+			color: yellow;
+		}
+
+		b {
+			color: #18b7ff;
+		}
+
+		.center {
+			display: block;
+			font-size: 2.5rem;
+			text-align: center;
+		}
+	}
+
+	&__wrapper {
+		width: 115rem;
+		height: 68vh;
+		overflow: hidden;
+		position: relative;
+	}
+
+	&__slide {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		transition: opacity 1.5s;
+	}
+
+	&__slide img {
+		width: 100%;
+		background-position: center;
+		object-fit: cover;
+		box-shadow: 0.2rem 0.2rem 2rem $color-shadow;
+	}
+}

@@ -1,0 +1,129 @@
+.section__offer {
+	width: 100%;
+	height: 100vh;
+	display: grid;
+	place-content: center;
+	position: relative;
+}
+
+.offer-bcg {
+	background: url('.././images/oferta.png');
+	background-size: cover;
+	background-position: bottom;
+	background-repeat: no-repeat;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	opacity: 0.2;
+}
+
+.offer {
+	max-width: 170rem;
+	height: 65rem;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+
+	.contentBox {
+		position: relative;
+		width: 38rem;
+		margin: 1rem 2rem;
+
+		.label {
+			height: 25rem;
+			@include boxShadow;
+			position: relative;
+			cursor: pointer;
+			filter: brightness(85%);
+			transition: filter 0.3s;
+
+			&:hover {
+				filter: brightness(100%);
+			}
+
+			h3 {
+				text-align: center;
+				font-size: 3.5em;
+				font-family: 'Oswald', sans-serif;
+				color: #fff;
+			}
+		}
+
+		.content {
+			position: relative;
+			background: #fff;
+			height: 0;
+			padding: 0 1rem;
+			overflow: hidden;
+			transition: height 1s, padding 0.5s;
+			overflow-y: auto;
+			font-size: 2rem;
+			border-bottom-left-radius: 2rem;
+			border-bottom-right-radius: 2rem;
+		}
+
+		&.active .content {
+			height: 40rem;
+			padding: 1rem 1rem;
+		}
+	}
+
+	.contentBox-1 {
+		.label {
+			background: url('.././images/mechanika.jpg') no-repeat;
+			background-size: cover;
+
+			h3 {
+				background-image: linear-gradient(to right, #087285, rgb(13, 165, 211));
+			}
+		}
+		.content {
+			background: rgb(112, 209, 238);
+		}
+	}
+
+	.contentBox-2 {
+		.label {
+			background: url('.././images/motor.jpg') no-repeat;
+			background-size: cover;
+
+			h3 {
+				background-image: linear-gradient(to right, #946809, rgb(189, 186, 14));
+			}
+		}
+
+		.content {
+			background: rgba(230, 228, 112, 0.9);
+		}
+	}
+
+	.contentBox-3 {
+		.label {
+			background: url('.././images/wulkanizacja.jpg') no-repeat;
+			background-size: cover;
+
+			h3 {
+				background-image: linear-gradient(to right, #a10c14, rgb(226, 59, 59));
+			}
+		}
+
+		.content {
+			background: rgba(226, 142, 142, 0.9);
+		}
+	}
+
+	.contentBox-4 {
+		.label {
+			background: url('.././images/road-mountain.jpg') no-repeat;
+			background-size: cover;
+
+			h3 {
+				background-image: linear-gradient(to right, #0b7e48, rgb(59, 226, 134));
+			}
+		}
+
+		.content {
+			background: rgba(133, 226, 175, 0.9);
+		}
+	}
+}

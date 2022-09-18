@@ -1,0 +1,242 @@
+.home {
+	width: 100%;
+	height: 100vh;
+	position: relative;
+
+	&__video {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 0;
+		opacity: 0.7;
+		overflow: hidden;
+	}
+
+	&__video-content {
+		height: 100%;
+		width: 100%;
+		object-fit: cover;
+	}
+
+	&__banner {
+		width: 100%;
+		position: absolute;
+		top: 20%;
+		left: 50%;
+		transform: translateX(-50%);
+		text-align: center;
+
+		&-heading {
+			margin-bottom: 4rem;
+			height: 20rem;
+			perspective: 50rem;
+			overflow: hidden;
+
+			span {
+				font-family: 'Oswald', sans-serif;
+				font-size: 12rem;
+				font-weight: 400;
+				text-transform: uppercase;
+				color: $color-text;
+				text-shadow: 0.3rem 0.3rem 0.6rem $color-shadow;
+				position: absolute;
+				width: 100%;
+				display: flex;
+				justify-content: center;
+				transform: translateZ(10rem);
+				opacity: 0;
+				letter-spacing: 3rem;
+			}
+		}
+
+		&-heading-1 {
+			animation: animateHeading 12s 3s infinite;
+		}
+
+		&-heading-2 {
+			animation: animateHeading 12s 6s infinite;
+		}
+
+		&-heading-3 {
+			animation: animateHeading 12s 9s infinite;
+		}
+
+		&-heading-4 {
+			animation: animateHeading 12s 12s infinite;
+		}
+
+		@keyframes animateHeading {
+			0% {
+				transform: translateZ(10rem);
+				opacity: 0;
+				letter-spacing: 3rem;
+			}
+
+			5% {
+				transform: translateZ(0rem);
+				opacity: 1;
+				letter-spacing: 1.5rem;
+			}
+			25% {
+				transform: translateZ(0rem);
+				opacity: 1;
+				letter-spacing: 1.5rem;
+			}
+
+			30% {
+				transform: translateZ(10rem);
+				opacity: 0;
+				letter-spacing: 3rem;
+			}
+
+			100% {
+				transform: translateZ(10rem);
+				opacity: 0;
+				letter-spacing: 3rem;
+			}
+		}
+
+		&-paragraph {
+			font-size: 4rem;
+			font-weight: 400;
+			text-transform: uppercase;
+			color: $color-text;
+			background-color: transparent;
+			backdrop-filter: blur(3px);
+			width: 30%;
+			margin: 0rem auto 4rem auto;
+			padding: 1rem 0;
+			box-shadow: 1rem 1rem 5rem $color-shadow;
+			font-family: 'Oswald', sans-serif;
+			visibility: hidden;
+			animation: fadeAnime 2s 1s forwards;
+		}
+
+		@keyframes fadeAnime {
+			from {
+				opacity: 0;
+				visibility: hidden;
+			}
+			to {
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+
+		&-btn {
+			display: block;
+			margin: 0 auto;
+			padding-top: 1.2rem;
+			width: 30rem;
+			height: 6rem;
+			background-image: linear-gradient(to right, #9b0e0e, #7a1010);
+			color: $color-text;
+			font-size: 2rem;
+			text-transform: uppercase;
+			border-radius: 3rem;
+			border: 0.1rem solid #800505;
+			box-shadow: 1rem 2rem 3rem $color-shadow;
+			text-shadow: 0.6rem 0.3rem 0.2rem $color-shadow;
+			cursor: pointer;
+			visibility: hidden;
+			animation: fadeAnime 2s 2s forwards;
+			position: relative;
+			overflow: hidden;
+			opacity: 0;
+		}
+
+		&-btn::before {
+			content: '';
+			width: 100%;
+			height: 100%;
+			background-image: linear-gradient(to right, transparent, $color-text, transparent);
+			position: absolute;
+			top: 0;
+			left: -100%;
+			transform: skewX (-30deg);
+			transition: left 0.5s;
+		}
+
+		&-btn:hover::before {
+			left: 100%;
+		}
+	}
+}
+
+// RESPONSIVE
+
+@media (max-width: 1400px) {
+	.home {
+		&__banner-heading span {
+			font-size: 10rem;
+		}
+
+		&__banner-paragraph {
+			width: 45rem;
+			font-size: 3rem;
+		}
+	}
+}
+
+@media (max-width: 900px) {
+	.home {
+		&__banner {
+			top: 30%;
+		}
+
+		&__banner-heading span {
+			font-size: 10rem;
+		}
+	}
+}
+
+@media (max-width: 700px) {
+	.home {
+		&__banner-heading span {
+			font-size: 8rem;
+			letter-spacing: 1.5rem;
+		}
+	}
+
+	@keyframes animateHeading {
+		0% {
+			transform: translateZ(10rem);
+			opacity: 0;
+			letter-spacing: 1.5rem;
+		}
+
+		5% {
+			transform: translateZ(0rem);
+			opacity: 1;
+			letter-spacing: 1rem;
+		}
+		25% {
+			transform: translateZ(0rem);
+			opacity: 1;
+			letter-spacing: 1rem;
+		}
+
+		30% {
+			transform: translateZ(10rem);
+			opacity: 0;
+			letter-spacing: 1.5rem;
+		}
+
+		100% {
+			transform: translateZ(10rem);
+			opacity: 0;
+			letter-spacing: 1.5rem;
+		}
+	}
+}
+
+@media (max-width: 550px) {
+	.home {
+		&__banner-heading span {
+			font-size: 4.5rem;
+			letter-spacing: 1rem;
+		}
+	}
+}
