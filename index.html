@@ -280,38 +280,38 @@
 
         <div class="signBox">
             <div class="sign">
-                <img src="./images/alfa romeo.png">
-                <img src="./images/audi.png">
-                <img src="./images/bmw.png">
-                <img src="./images/chevrolet.png">
-                <img src="./images/chrysler.png">
-                <img src="./images/citroen.png">
-                <img src="./images/dacia.png">
-                <img src="./images/dodge.png">
-                <img src="./images/fiat.png">
-                <img src="./images/ford.png">
-                <img src="./images/honda.png">
-                <img src="./images/hyundai.png">
-                <img src="./images/jaguar.png">
-                <img src="./images/jeep.png">
-                <img src="./images/kia.png">
-                <img src="./images/land rover.png">
-                <img src="./images/lexus.png">
-                <img src="./images/mazda.png">
-                <img src="./images/mercedes.png">
-                <img src="./images/mitsubishi.png">
-                <img src="./images/nissan.png">
-                <img src="./images/opel.png">
-                <img src="./images/peugeot.png">
-                <img src="./images/renault.png">
-                <img src="./images/saab.png">
-                <img src="./images/seat.png">
-                <img src="./images/skoda.png">
-                <img src="./images/subaru.png">
-                <img src="./images/suzuki.png">
-                <img src="./images/toyota.png">
-                <img src="./images/volvo.png">
-                <img src="./images/vw.png">
+                <img src="./images/alfa romeo.png" alt="logo alfa romeo">
+                <img src="./images/audi.png" alt="logo audi">
+                <img src="./images/bmw.png" alt="logo bmw">
+                <img src="./images/chevrolet.png" alt="logo chevrolet">
+                <img src="./images/chrysler.png" alt="logo chrysler">
+                <img src="./images/citroen.png" alt="logo citroen">
+                <img src="./images/dacia.png" alt="logo alfa dacia">
+                <img src="./images/dodge.png" alt="logo alfa dodge">
+                <img src="./images/fiat.png" alt="logo alfa fiat">
+                <img src="./images/ford.png" alt="logo ford">
+                <img src="./images/honda.png" alt="logo honda">
+                <img src="./images/hyundai.png" alt="logo hyundai">
+                <img src="./images/jaguar.png" alt="logo jaguar">
+                <img src="./images/jeep.png" alt="logo jeep">
+                <img src="./images/kia.png" alt="logo kia">
+                <img src="./images/land rover.png" alt="logo land rover">
+                <img src="./images/lexus.png" alt="logo lexus">
+                <img src="./images/mazda.png" alt="logo mazda">
+                <img src="./images/mercedes.png" alt="logo mercedes">
+                <img src="./images/mitsubishi.png" alt="logo mitsubishi">
+                <img src="./images/nissan.png" alt="logo nissan">
+                <img src="./images/opel.png" alt="logo opel">
+                <img src="./images/peugeot.png" alt="logo peugeot">
+                <img src="./images/renault.png" alt="logo renault">
+                <img src="./images/saab.png" alt="logo alfa saab">
+                <img src="./images/seat.png" alt="logo alfa seat">
+                <img src="./images/skoda.png" alt="logo skoda">
+                <img src="./images/subaru.png" alt="logo subaru">
+                <img src="./images/suzuki.png" alt="logo suzuki">
+                <img src="./images/toyota.png" alt="logo toyota">
+                <img src="./images/volvo.png" alt="logo volvo">
+                <img src="./images/vw.png" alt="logo vw">
             </div>
         </div>
     </section>
@@ -442,34 +442,37 @@
             <!-- Form -->
             <div class="contactUs__contact contactUs__form" data-0-bottom="opacity:1;" data-bottom-top="opacity:0;">
                 <h3>Prześlij wiadomość</h3>
-                <form action="">
+                <form id="form" name="Bernard" onsubmit="return validate_formularz(this)" action="mailto:ingwai@wp.pl"
+                    method="post" enctype="text/plain">
                     <div class="contactUs__formBox">
                         <div class="contactUs__row50">
                             <div class="contactUs__inputBox">
-                                <span>Imię</span>
-                                <input type="text" required>
+                                <label class="contactUs__inputBox-title" for="name">Imię</label>
+                                <input type="text" required id="name" name="Imie" aria-labelledby="name">>
                             </div>
                             <div class="contactUs__inputBox">
-                                <span>Nazwisko</span>
-                                <input type="text" required>
+                                <label class="contactUs__inputBox-title" for="surname">Nazwisko</label>
+                                <input type="text" required id="surname" name="Nazwisko" aria-labelledby="name">
                             </div>
                         </div>
 
                         <div class="contactUs__row50">
                             <div class="contactUs__inputBox">
-                                <span>E-mail</span>
-                                <input type="text" pattern="[A-Za-z0-9._+-]+@[A-Za-z0-9 -]+\.[a-z]{2,4}" required>
+                                <label class="contactUs__inputBox-title" for="email">E-mail</label>
+                                <input type="email" pattern="[A-Za-z0-9._+-]+@[A-Za-z0-9 -]+\.[a-z]{2,4}" required
+                                    id="email" aria-labelledby="name" name="e-mail">
                             </div>
                             <div class="contactUs__inputBox">
-                                <span>Telefon</span>
-                                <input type="text">
+                                <label class="contactUs__inputBox-title" for="phone">Telephone</label>
+                                <input type="text" id="phone" aria-labelledby="name" name="Numer telefonu">
                             </div>
                         </div>
 
                         <div class="contactUs__row100">
                             <div class="contactUs__inputBox">
-                                <span>Wiadomość</span>
-                                <textarea placeholder="Tutaj wpisz wiadomość..."></textarea>
+                                <label class="contactUs__inputBox-title" for="message">Wiadomość</label>
+                                <textarea placeholder="Tutaj wpisz wiadomość..." id="message" aria-labelledby="name"
+                                    name="Tresc wiadomosci"></textarea>
                             </div>
                         </div>
 

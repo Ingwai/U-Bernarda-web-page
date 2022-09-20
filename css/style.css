@@ -712,7 +712,7 @@ html {
 .opinion {
   width: 100%;
   height: 100vh;
-  background: radial-gradient(circle, rgba(116, 45, 163, 0.8) 0%, rgba(231, 95, 95, 0.7) 50%, rgba(235, 165, 68, 0.8) 100%), url(".././images/car-mechanic-customer-shaking-hands_Image by aleksandarlittlewolf on Freepik.jpg");
+  background: radial-gradient(circle, rgba(116, 45, 163, 0.8) 0%, rgba(231, 95, 95, 0.7) 50%, rgba(235, 165, 68, 0.8) 100%), url(".././images/opinion_bcg.jpg");
   background-position: center;
   background-size: cover;
   overflow: hidden; }
@@ -771,7 +771,7 @@ html {
     height: 100vh; } }
 
 .contactUs {
-  background-image: linear-gradient(to right, rgba(40, 96, 180, 0.3) 5%, rgba(255, 255, 255, 0.6)), url(.././images/road-mountain.jpg);
+  background-image: linear-gradient(to right, rgba(40, 96, 180, 0.3) 5%, rgba(255, 255, 255, 0.6)), url(.././images/road-desert.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
@@ -843,11 +843,11 @@ html {
 .contactUs__row100 {
   text-align: center; }
 
-.contactUs__inputBox span {
+.contactUs__inputBox-title {
   font-family: 'Oswald', sans-serif;
   font-size: 1.8rem;
   color: #fff;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   margin-bottom: 0.5rem;
   font-weight: 500; }
 
@@ -954,7 +954,7 @@ html {
     grid-template-rows: repeat(2, 48rem); }
   .contactUs__row50 {
     column-gap: 3rem; }
-  .contactUs__inputBox span {
+  .contactUs__inputBox-title {
     font-size: 2.5rem;
     margin: 3rem 0 1rem; }
   .contactUs__inputBox input {

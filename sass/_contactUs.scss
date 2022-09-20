@@ -1,6 +1,6 @@
 .contactUs {
 	background-image: linear-gradient(to right, rgba(40, 96, 180, 0.3) 5%, rgba(255, 255, 255, 0.6)),
-		url(.././images/road-mountain.jpg);
+		url(.././images/road-desert.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
 	position: relative;
@@ -85,12 +85,11 @@
 .contactUs__row100 {
 	text-align: center;
 }
-
-.contactUs__inputBox span {
+.contactUs__inputBox-title {
 	font-family: 'Oswald', sans-serif;
 	font-size: 1.8rem;
 	color: $color-text;
-	margin-top: 1rem;
+	margin-top: 0.5rem;
 	margin-bottom: 0.5rem;
 	font-weight: 500;
 }
@@ -226,7 +225,7 @@
 		column-gap: 3rem;
 	}
 
-	.contactUs__inputBox span {
+	.contactUs__inputBox-title {
 		font-size: 2.5rem;
 		margin: 3rem 0 1rem;
 	}
@@ -276,6 +275,7 @@
 		text-align: right;
 	}
 }
+
 
 @media (max-width: 1280px) {
 	.contactUs__info {
