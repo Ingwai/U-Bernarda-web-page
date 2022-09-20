@@ -4,6 +4,7 @@
 	background-color: #222020;
 	display: flex;
 	align-items: center;
+	justify-content: flex-start;
 	flex-direction: column;
 	position: relative;
 
@@ -12,11 +13,12 @@
 		padding: 0rem 10rem;
 		display: flex;
 		align-items: center;
+		justify-content: space-between;
 		column-gap: 10rem;
 	}
 
 	&__paragraph {
-		width: 60rem;
+		width: 40%;
 		font-size: 2rem;
 		color: $color-text;
 		padding: 2rem 0 2rem 0;
@@ -53,8 +55,8 @@
 	}
 
 	&__wrapper {
-		width: 115rem;
-		height: 68vh;
+		width: 60%;
+		height: 100%;
 		overflow: hidden;
 		position: relative;
 	}
@@ -62,8 +64,8 @@
 	&__slide {
 		position: absolute;
 		width: 100%;
-		height: 100%;
 		transition: opacity 1.5s;
+		margin: 4rem 0;
 	}
 
 	&__slide img {
@@ -71,5 +73,108 @@
 		background-position: center;
 		object-fit: cover;
 		box-shadow: 0.2rem 0.2rem 2rem $color-shadow;
+	}
+}
+
+@media (min-width: 2000px) {
+	.aboutUs {
+		justify-content: space-around;
+		
+		&__wrapper {
+			height: 65vh;
+		}
+	}
+}
+
+@media (max-width: 1680px) {
+	.aboutUs {
+		height: 100vh;
+		justify-content: flex-start;
+		
+		&__paragraph {
+			font-size: 1.8rem;
+		}
+
+		&__wrapper {
+			height: 55vh;
+		}
+	}
+}
+
+@media (max-width: 1280px) {
+	.aboutUs {
+		height: 90vh;
+		&__wrapper {
+			height: 45vh;
+		}
+	}
+}
+
+@media (max-width: 1024px) {
+	.aboutUs {
+		justify-content: flex-start;
+		height: 160vh;
+
+		&__box {
+			flex-direction: column;
+		}
+
+		&__paragraph {
+			width: 90%;
+		}
+
+		&__wrapper {
+			width: 80%;
+			height: 65vh;
+		}
+	}
+}
+
+@media (max-width: 820px) {
+	.aboutUs {
+		height: 90vh;
+
+
+		&__wrapper {
+			height: 35vh;
+		}
+	}
+}
+
+@media (max-width: 600px) {
+	.aboutUs {
+		height: 110vh;
+
+			&__wrapper {
+			height: 35vh;
+			width: 90%;
+		}
+	}
+}
+
+
+@media (max-width: 420px) {
+	.aboutUs {
+		height: 120vh;
+
+		&__wrapper {
+			height: 25vh;
+		}
+	}
+}
+
+
+@media (max-width: 320px) {
+	.aboutUs {
+		height: 170vh;
+
+		&__paragraph {
+			width: 100%;
+		}
+
+		&__wrapper {
+			width: 100%;
+			height: 30vh;
+		}
 	}
 }

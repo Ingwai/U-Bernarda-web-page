@@ -22,7 +22,7 @@
 		background-position: center;
 		background-size: cover;
 		width: 45rem;
-		height: 65rem;
+		height: 63rem;
 		border-radius: 1rem;
 		box-shadow: 0 1.5rem 5rem rgba(0, 0, 0, 0.2);
 		filter: blur(0.5rem) brightness(0.8);
@@ -37,14 +37,20 @@
 	}
 
 	&-paragraph {
-		i {
+		display: block;
+
+		.fa-quote-left {
 			font-size: 3rem;
 			display: block;
 			color: rgb(133, 210, 245);
 		}
 
 		.fa-quote-right {
-			text-align: right;
+			font-size: 3rem;
+			display: block;
+			color: rgb(133, 210, 245);
+			text-align: center;
+			width: 190%;
 		}
 	}
 
@@ -68,5 +74,17 @@
 	}
 	.swiper-slide-active {
 		filter: blur(0rem);
+	}
+}
+
+@media (max-width: 900px) {
+	.opinion {
+		height: 70vh;
+	}
+}
+
+@media (max-width: 384px) {
+	.opinion {
+		height: 100vh;
 	}
 }

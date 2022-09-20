@@ -167,15 +167,11 @@
 
 // RESPONSIVE
 
-@media (max-width: 1400px) {
-	.home {
-		&__banner-heading span {
-			font-size: 10rem;
-		}
 
+@media (max-width: 1440px) {
+	.home {
 		&__banner-paragraph {
-			width: 45rem;
-			font-size: 3rem;
+			width: 50rem;
 		}
 	}
 }
@@ -192,51 +188,37 @@
 	}
 }
 
-@media (max-width: 700px) {
+@media (max-width: 768px) {
 	.home {
 		&__banner-heading span {
-			font-size: 8rem;
-			letter-spacing: 1.5rem;
-		}
-	}
-
-	@keyframes animateHeading {
-		0% {
-			transform: translateZ(10rem);
-			opacity: 0;
-			letter-spacing: 1.5rem;
-		}
-
-		5% {
-			transform: translateZ(0rem);
-			opacity: 1;
-			letter-spacing: 1rem;
-		}
-		25% {
-			transform: translateZ(0rem);
-			opacity: 1;
-			letter-spacing: 1rem;
-		}
-
-		30% {
-			transform: translateZ(10rem);
-			opacity: 0;
-			letter-spacing: 1.5rem;
-		}
-
-		100% {
-			transform: translateZ(10rem);
-			opacity: 0;
+			font-size: 10rem;
 			letter-spacing: 1.5rem;
 		}
 	}
 }
 
-@media (max-width: 550px) {
+@media (max-width: 420px) {
 	.home {
 		&__banner-heading span {
-			font-size: 4.5rem;
-			letter-spacing: 1rem;
+			font-size: 8rem;
+		}
+
+		&__banner-paragraph {
+			width: 48rem;
+			font-size: 4rem;
+		}
+	}
+}
+
+@media (max-width: 320px) {
+	.home {
+		&__banner-heading span {
+			font-size: 5rem;
+		}
+
+		&__banner-paragraph {
+			width: 37rem;
+			font-size: 3rem;
 		}
 	}
 }

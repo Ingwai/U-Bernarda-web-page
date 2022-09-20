@@ -57,7 +57,7 @@
 	}
 }
 
-@media (max-width: 700px) {
+@media (max-width: 768px) {
 	.footer {
 		flex-direction: column;
 		justify-content: center;
@@ -68,6 +68,21 @@
 			a {
 				margin: 1rem;
 			}
+		}
+	}
+}
+
+
+@media (max-width: 320px) {
+	.footer {
+		&__nav a {
+		margin-right: 1.5rem;
+		font-size: 1.5rem;
+
+		&::first-letter {
+			color: $color-brand-1;
+			font-size: 2rem;
+		}
 		}
 	}
 }

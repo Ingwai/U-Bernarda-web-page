@@ -15,7 +15,7 @@ navbarList.addEventListener('click', (e) => {
 
 // --------------------------------------------------
 
-var swiper = new Swiper('.mySwiper', {
+const swiper = new Swiper('.mySwiper', {
 	// effect: 'coverflow',
 	effect: 'cards',
 	grabCursor: true,
