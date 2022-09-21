@@ -1,13 +1,4 @@
 @font-face {
-    font-family: 'Lato Hairline';
-    src: url('Lato-HairlineItalic.woff2') format('woff2'),
-        url('Lato-HairlineItalic.woff') format('woff');
-    font-weight: 300;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
     font-family: 'Lato';
     src: url('Lato-Bold.woff2') format('woff2'),
         url('Lato-Bold.woff') format('woff');
@@ -22,15 +13,6 @@
         url('Lato-BlackItalic.woff') format('woff');
     font-weight: 900;
     font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Lato Hairline';
-    src: url('Lato-Hairline.woff2') format('woff2'),
-        url('Lato-Hairline.woff') format('woff');
-    font-weight: 300;
-    font-style: normal;
     font-display: swap;
 }
 
@@ -219,15 +201,6 @@
     src: url('HELLODENVERDISPLAYBOLD-Bold.woff2') format('woff2'),
         url('HELLODENVERDISPLAYBOLD-Bold.woff') format('woff');
     font-weight: bold;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Icklips';
-    src: url('Icklips.woff2') format('woff2'),
-        url('Icklips.woff') format('woff');
-    font-weight: normal;
     font-style: normal;
     font-display: swap;
 }

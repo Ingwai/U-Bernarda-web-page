@@ -1,6 +1,6 @@
 .contactUs {
 	background-image: linear-gradient(to right, rgba(40, 96, 180, 0.3) 5%, rgba(255, 255, 255, 0.6)),
-		url(.././images/road-desert.jpg);
+		url(.././images/road-desert.webp);
 	background-repeat: no-repeat;
 	background-size: cover;
 	position: relative;
@@ -212,7 +212,7 @@
 
 // RESPONSIVE
 
-@media (min-width: 2000px) {
+@media (min-width: 2560px) {
 	.contactUs {
 		padding: 20px;
 		height: 100vh;

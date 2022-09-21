@@ -25,9 +25,9 @@ html {
   color: #fff;
   margin: 10rem 0 5rem 0; }
 
-@media (min-width: 2000px) {
+@media (min-width: 2560px) {
   html {
-    font-size: 62.5%; } }
+    font-size: 75%; } }
 
 @media (max-width: 1680px) {
   html {
@@ -53,7 +53,7 @@ html {
 
 @media (max-width: 600px) {
   html {
-    font-size: 35%; } }
+    font-size: 38%; } }
 
 .navbar {
   width: 100%;
@@ -128,7 +128,7 @@ html {
     left: 3rem; }
     .navbar__logo p {
       font-family: 'HELLO DENVER DISPLAY';
-      font-size: 3.5rem;
+      font-size: 4rem;
       color: #fff;
       letter-spacing: 0.3rem;
       text-transform: uppercase;
@@ -517,7 +517,7 @@ html {
   position: relative; }
 
 .offer-bcg {
-  background: url(".././images/oferta.png");
+  background: url(".././images/oferta.webp");
   background-size: cover;
   background-position: bottom;
   background-repeat: no-repeat;
@@ -571,21 +571,21 @@ html {
   .offer .contentBox-1 .content {
     background: #70d1ee; }
   .offer .contentBox-2 .label {
-    background: url(".././images/klimatyzacja.jpg") no-repeat;
+    background: url(".././images/klimatyzacja.webp") no-repeat;
     background-size: cover; }
     .offer .contentBox-2 .label h3 {
       background-image: linear-gradient(to right, #946809, #bdba0e); }
   .offer .contentBox-2 .content {
     background: rgba(230, 228, 112, 0.9); }
   .offer .contentBox-3 .label {
-    background: url(".././images/wulkanizacja.jpg") no-repeat;
+    background: url(".././images/wulkanizacja.webp") no-repeat;
     background-size: cover; }
     .offer .contentBox-3 .label h3 {
       background-image: linear-gradient(to right, #a10c14, #e23b3b); }
   .offer .contentBox-3 .content {
     background: rgba(226, 142, 142, 0.9); }
   .offer .contentBox-4 .label {
-    background: url(".././images/diagnostyka.jpg") no-repeat;
+    background: url(".././images/diagnostyka.webp") no-repeat;
     background-size: cover; }
     .offer .contentBox-4 .label h3 {
       background-image: linear-gradient(to right, #0b7e48, #3be286); }
@@ -712,7 +712,7 @@ html {
 .opinion {
   width: 100%;
   height: 100vh;
-  background: radial-gradient(circle, rgba(116, 45, 163, 0.8) 0%, rgba(231, 95, 95, 0.7) 50%, rgba(235, 165, 68, 0.8) 100%), url(".././images/opinion_bcg.jpg");
+  background: radial-gradient(circle, rgba(116, 45, 163, 0.8) 0%, rgba(231, 95, 95, 0.7) 50%, rgba(235, 165, 68, 0.8) 100%), url(".././images/opinion_bcg.webp");
   background-position: center;
   background-size: cover;
   overflow: hidden; }
@@ -720,7 +720,7 @@ html {
     width: 100%;
     padding: 3rem 0; }
   .opinion-card {
-    background-image: url(".././images/opinion.jpg");
+    background-image: url(".././images/opinion.webp");
     background-position: center;
     background-size: cover;
     width: 45rem;
@@ -771,7 +771,7 @@ html {
     height: 100vh; } }
 
 .contactUs {
-  background-image: linear-gradient(to right, rgba(40, 96, 180, 0.3) 5%, rgba(255, 255, 255, 0.6)), url(.././images/road-desert.jpg);
+  background-image: linear-gradient(to right, rgba(40, 96, 180, 0.3) 5%, rgba(255, 255, 255, 0.6)), url(.././images/road-desert.webp);
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
@@ -946,7 +946,7 @@ html {
   text-align: right;
   color: #fff; }
 
-@media (min-width: 2000px) {
+@media (min-width: 2560px) {
   .contactUs {
     padding: 20px;
     height: 100vh; }
@@ -1037,7 +1037,7 @@ html {
   align-items: center;
   background-size: cover;
   background-position: top;
-  background: radial-gradient(circle, rgba(139, 130, 130, 0.8) 40%, rgba(64, 63, 62, 0.9) 100%), url(".././images/road.jpg") no-repeat;
+  background: radial-gradient(circle, rgba(139, 130, 130, 0.8) 40%, rgba(64, 63, 62, 0.9) 100%), url(".././images/road.webp") no-repeat;
   padding: 0 10rem; }
   .footer__nav a {
     font-family: 'Lato', sans-serif;
