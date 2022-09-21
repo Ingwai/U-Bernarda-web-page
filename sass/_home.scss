@@ -197,10 +197,17 @@
 	}
 }
 
+@media only screen and (max-width: 900px) and (orientation: landscape) {
+	.home {
+		height: 130vh;
+	}
+}
+
+
 @media (max-width: 420px) {
 	.home {
 		&__banner-heading span {
-			font-size: 8rem;
+			font-size: 7rem;
 		}
 
 		&__banner-paragraph {
@@ -209,6 +216,7 @@
 		}
 	}
 }
+
 
 @media (max-width: 320px) {
 	.home {
@@ -222,3 +230,4 @@
 		}
 	}
 }
+

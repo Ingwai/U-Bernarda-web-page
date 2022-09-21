@@ -195,13 +195,13 @@ html {
   .navbar__logo {
     top: 3.5rem; }
     .navbar__logo p {
-      font-size: 2.2rem; }
+      font-size: 2.5rem; }
     .navbar__logo span {
       font-size: 2.2rem; } }
 
 @media (max-width: 320px) {
   .navbar__logo p {
-    font-size: 1.8rem; }
+    font-size: 2.1rem; }
   .navbar__logo span {
     font-size: 1.8rem; } }
 
@@ -379,9 +379,13 @@ html {
     font-size: 10rem;
     letter-spacing: 1.5rem; } }
 
+@media only screen and (max-width: 900px) and (orientation: landscape) {
+  .home {
+    height: 130vh; } }
+
 @media (max-width: 420px) {
   .home__banner-heading span {
-    font-size: 8rem; }
+    font-size: 7rem; }
   .home__banner-paragraph {
     width: 48rem;
     font-size: 4rem; } }
@@ -486,6 +490,30 @@ html {
     .aboutUs__wrapper {
       height: 35vh; } }
 
+@media (min-width: 800px) and (max-width: 900px) and (orientation: landscape) {
+  .aboutUs {
+    height: 240vh; }
+    .aboutUs__box {
+      width: 100%;
+      padding: 0rem 6rem; }
+    .aboutUs__paragraph {
+      width: 100%; }
+    .aboutUs__wrapper {
+      height: 100vh;
+      width: 100%; } }
+
+@media (min-width: 660px) and (max-width: 800px) and (orientation: landscape) {
+  .aboutUs {
+    height: 240vh; }
+    .aboutUs__box {
+      width: 100%;
+      padding: 0rem 6rem; }
+    .aboutUs__paragraph {
+      width: 100%; }
+    .aboutUs__wrapper {
+      height: 100vh;
+      width: 100%; } }
+
 @media (max-width: 600px) {
   .aboutUs {
     height: 110vh; }
@@ -496,17 +524,35 @@ html {
 @media (max-width: 420px) {
   .aboutUs {
     height: 120vh; }
+    .aboutUs__box {
+      width: 100%;
+      padding: 0rem 5rem; }
+    .aboutUs__paragraph {
+      width: 100%; }
     .aboutUs__wrapper {
-      height: 25vh; } }
+      height: 35vh;
+      width: 100%; } }
+
+@media (min-width: 320px) and (max-width: 660px) and (orientation: landscape) {
+  .aboutUs {
+    height: 260vh; }
+    .aboutUs__box {
+      width: 100%;
+      padding: 0rem 6rem; }
+    .aboutUs__paragraph {
+      width: 100%; }
+    .aboutUs__wrapper {
+      height: 100vh;
+      width: 100%; } }
 
 @media (max-width: 320px) {
   .aboutUs {
     height: 170vh; }
-    .aboutUs__paragraph {
-      width: 100%; }
-    .aboutUs__wrapper {
+    .aboutUs__box {
       width: 100%;
-      height: 30vh; } }
+      padding: 0rem 5rem; }
+    .aboutUs__paragraph {
+      width: 100%; } }
 
 .section__offer {
   width: 100%;
@@ -608,6 +654,26 @@ html {
   .offer .contentBox.active .content {
     min-height: calc(40vh - 40rem); } }
 
+@media (min-width: 800px) and (max-width: 900px) and (orientation: landscape) {
+  .section__offer {
+    height: 550vh; }
+  .offer .contentBox.active .content {
+    min-height: 30rem; } }
+
+@media (min-width: 660px) and (max-width: 800px) and (orientation: landscape) {
+  .section__offer {
+    height: 450vh; }
+  .offer .contentBox.active .content {
+    min-height: 30rem; } }
+
+@media (min-width: 320px) and (max-width: 660px) and (orientation: landscape) {
+  .section__offer {
+    height: 550vh; }
+  .offer .contentBox .label {
+    height: 35rem; }
+  .offer .contentBox.active .content {
+    min-height: 25rem; } }
+
 @media (max-width: 384px) {
   .section__offer {
     height: 200vh; }
@@ -705,6 +771,14 @@ html {
   .shop .shopBox .card:hover .card__head {
     font-size: 1.2rem; } }
 
+@media (min-width: 767px) and (max-width: 900px) and (orientation: landscape) {
+  .shop {
+    max-height: 240vh; } }
+
+@media (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
+  .shop {
+    max-height: 300vh; } }
+
 @media (max-width: 420px) {
   .shop .shopBox .card:hover .card__head {
     opacity: 0; } }
@@ -766,9 +840,25 @@ html {
   .opinion {
     height: 70vh; } }
 
+@media (min-width: 660px) and (max-width: 900px) and (orientation: landscape) {
+  .opinion {
+    height: 180vh; } }
+
+@media (max-width: 600px) {
+  .opinion {
+    height: 80vh; } }
+
 @media (max-width: 384px) {
   .opinion {
     height: 100vh; } }
+
+@media (min-width: 320px) and (max-width: 660px) and (orientation: landscape) {
+  .opinion {
+    height: 200vh; } }
+
+@media (max-width: 320px) {
+  .opinion {
+    height: 110vh; } }
 
 .contactUs {
   background-image: linear-gradient(to right, rgba(40, 96, 180, 0.3) 5%, rgba(255, 255, 255, 0.6)), url(.././images/road-desert.webp);
@@ -949,29 +1039,29 @@ html {
 @media (min-width: 2560px) {
   .contactUs {
     padding: 20px;
-    height: 100vh; }
+    height: 92vh; }
   .contactUs__box {
-    grid-template-rows: repeat(2, 48rem); }
+    grid-template-rows: repeat(2, 38rem); }
   .contactUs__row50 {
     column-gap: 3rem; }
   .contactUs__inputBox-title {
     font-size: 2.5rem;
-    margin: 3rem 0 1rem; }
+    margin: 1rem 0 1rem; }
   .contactUs__inputBox input {
     padding: 1.5rem;
     font-size: 2.5rem; }
   .contactUs__inputBox textarea {
     font-size: 2.5rem;
-    min-height: 32rem;
-    margin-bottom: 3rem; }
+    min-height: 22rem;
+    margin-bottom: 1.5rem; }
   .contactUs__info .contactUs__infoBox div {
     display: flex;
     align-items: center;
-    margin-bottom: 3rem; }
+    margin-bottom: 1rem; }
   .contactUs__info .contactUs__infoBox div span {
     min-width: 5rem;
     height: 5rem;
-    font-size: 3rem;
+    font-size: 2.2rem;
     margin-right: 2rem; }
   .contactUs__info .contactUs__infoBox div p {
     font-size: 2.2rem;
@@ -979,9 +1069,9 @@ html {
   .contactUs__info .contactUs__infoBox div a {
     font-size: 2.2rem; }
   .contactUs__hoursBox h3 {
-    margin-bottom: 2.8rem; }
+    margin-bottom: 2rem; }
   .contactUs_hours-list {
-    font-size: 2.5rem; }
+    font-size: 2.2rem; }
   .contactUs_hours-list span {
     text-align: right; } }
 
@@ -1022,11 +1112,35 @@ html {
   .contactUs {
     height: fit-content; }
   .contactUs__info {
-    column-gap: 10rem; } }
+    column-gap: 18rem; } }
+
+@media (max-width: 420px) {
+  .contactUs__contact {
+    padding: 3rem; }
+  .contactUs__info {
+    column-gap: 7rem; } }
 
 @media (max-width: 384px) {
+  .contactUs__contact {
+    padding: 2rem; }
   .contactUs__info {
     column-gap: 5rem; } }
+
+@media (max-width: 320px) {
+  .contactUs__contact {
+    padding: 2rem; }
+    .contactUs__contact h3 {
+      font-size: 2.5rem; }
+  .contactUs__info {
+    column-gap: 4rem;
+    font-size: 1rem; }
+  .contactUs__info .contactUs__infoBox div p {
+    font-size: 1.3rem; }
+  .contactUs__info .contactUs__infoBox div a {
+    font-size: 1.3rem; }
+  .contactUs_hours-list {
+    margin-top: .9rem;
+    font-size: 1.3rem; } }
 
 .footer {
   width: 100%;
@@ -1078,6 +1192,22 @@ html {
       margin-bottom: 2rem; }
       .footer__nav a {
         margin: 1rem; } }
+
+@media (min-width: 767px) and (max-width: 900px) and (orientation: landscape) {
+  .footer {
+    height: 8rem; }
+    .footer__nav {
+      margin-bottom: 0rem; } }
+
+@media (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
+  .footer {
+    height: 8rem; }
+    .footer__nav {
+      margin-bottom: 0rem; } }
+
+@media (max-width: 384px) {
+  .footer__nav {
+    margin-bottom: 0rem; } }
 
 @media (max-width: 320px) {
   .footer__nav a {

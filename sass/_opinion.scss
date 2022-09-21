@@ -83,8 +83,32 @@
 	}
 }
 
+@media (min-width: 660px) and (max-width: 900px) and (orientation: landscape) {
+	.opinion {
+		height: 180vh;
+	}
+}
+
+@media (max-width: 600px) {
+	.opinion {
+		height: 80vh;
+	}
+}
+
 @media (max-width: 384px) {
 	.opinion {
 		height: 100vh;
+	}
+}
+
+@media (min-width: 320px) and (max-width: 660px) and (orientation: landscape) {
+	.opinion {
+		height: 200vh;
+	}
+}
+
+@media (max-width: 320px) {
+	.opinion {
+		height: 110vh;
 	}
 }
